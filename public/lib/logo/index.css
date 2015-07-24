@@ -1,0 +1,15 @@
+.Logo {
+  background: url('images/logo.png') no-repeat center;
+  background-size: 100%;
+  height: 66px;
+  width: 263px;
+  text-indent: -9999px;
+}
+
+.Logo--small {
+  width: 200px;
+  height: 34px;
+  position: absolute;
+  margin-top: -70px;
+  z-index: 1;
+}

@@ -1,0 +1,225 @@
+@import 'necolas/normalize.css';
+@import './lib/logo';
+
+body {
+  color: #535353;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  margin: 40px 0;
+  border-top: 1px solid #CCC;
+}
+
+.Button {
+  background: #00b673;
+  border-radius: 5px;
+  line-height: 1;
+  padding: 13px 30px 14px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 1px 3px rgba(0,0,0,0.2);
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.Hero {
+  background: #64476E;
+  background-size: 90%;
+  color: #BCC3D2;
+}
+
+.Hero-share {
+  margin-top: 30px;
+}
+
+.Hero-content {
+  text-align: center;
+  width: 550px;
+  padding: 180px 0;
+  margin: 0 auto;
+}
+
+.Hero-logo {
+  margin: 0 auto;
+}
+
+.Hero-install {
+  line-height: 50px;
+  border-radius: 7px;
+  background: #3D424D;
+  display: inline-block;
+  padding: 0 30px;
+  margin: -10px 0 20px 0;
+  color: #fff;
+}
+
+.Hero-lead {
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 30px 0;
+  color: #fff;
+  text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+}
+
+.Content-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #64476E;
+  -webkit-background-size: 90%;
+  background-size: 90%;
+  color: #BCC3D2;
+  padding: 155px 20px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.Content-body {
+  margin-left: 250px;
+  background: #fff;
+  padding: 80px 0 100px 0;
+}
+
+.Content-copy {
+  color: #5A6274;
+}
+
+.Footer {
+  border-top: 1px solid #eee;
+  margin-top: 100px;
+}
+
+.Footer-segment {
+  margin: 70px auto 0;
+}
+
+.Contents a {
+  display: block;
+  font-size: 16px;
+  color: #BCC3D2;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.Contents a:hover {
+  text-decoration: underline;
+}
+
+.Note {
+  padding: 30px;
+  border: 1px solid #00B673;
+  margin: 30px 0;
+  box-shadow: 3px 3px 0px #00B673;
+}
+
+.Copy {
+
+}
+
+.Copy > * {
+  margin-left: 80px;
+  margin-right: 100px;
+}
+
+.Copy pre {
+
+}
+
+.Copy > p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.Copy p code {
+  background: rgba(0,0,0,0.02);
+  font-size: 14px;
+  font-family: "Source Code";
+  font-weight: 400;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0 5px;
+}
+
+.Copy h1 {
+  font-size: 55px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #00B673;
+}
+
+.Copy h2 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 300;
+  color: #00B673;
+}
+
+.Copy h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.Copy mark {
+  background: #FEFA95;
+}
+
+.Copy a {
+  color: #00B673;
+}
+
+.Copy ul {
+  list-style-position: outside;
+  padding:0;
+}
+
+.Copy-lead {
+  font-size: 20px;
+  line-height: 1.5
+}
+
+.Code {
+  /*border: 3px solid #96E2DE;*/
+  margin: 20px 0;
+  max-width: none;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 20px 100px;
+  font-size: 14px;
+  font-family: "Source Code";
+  font-weight: 400;
+  border-width: 1px 0;
+}
+
+.Highlight-keyword {
+  color: #9F6AB6;
+}
+
+.Highlight-string {
+  color: #D14;
+}
+
+.Highlight-comment {
+  color: #aaa;
+}
