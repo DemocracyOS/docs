@@ -1,0 +1,23 @@
+{
+  "name": "democracyos-docs",
+  "version": "1.0.0",
+  "description": "DemocracyOS Documentation Site",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemocracyOS/docs.git"
+  },
+  "keywords": [
+    "democracyos",
+    "docs",
+    "documentation"
+  ],
+  "author": "DemocracyOS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DemocracyOS/docs/issues"
+  },
+  "homepage": "https://github.com/DemocracyOS/docs#readme"
+}
