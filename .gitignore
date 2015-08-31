@@ -1,5 +1,6 @@
 .DS_Store
+.tmp
 /app
 /build
-/content
 /node_modules
+/npm-debug.log
