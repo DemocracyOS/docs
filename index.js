@@ -1,30 +1,31 @@
 var options = require('commander')
 var metalsmith = require('metalsmith')
-var addFiles = require('./plugins/addFiles')
 var browserSync = require('metalsmith-browser-sync')
 var branch = require('metalsmith-branch')
 var markdown = require('metalsmith-markdown')
 var fingerprint = require('metalsmith-fingerprint')
 var layouts = require('metalsmith-layouts')
-var rename = require('metalsmith-rename')
 var stylus = require('metalsmith-stylus')
+var permalinks = require('metalsmith-permalinks')
+var navigation = require('metalsmith-navigation')
 var nib = require('nib')
+var addFiles = require('./plugins/add-files')
+var navigationTree = require('./plugins/navigation-tree')
 
 options
   .option('-w, --watch', 'Serve and watch files.')
   .option('-P, --pretty', 'Compile pretty assets.')
   .parse(process.argv)
 
-
 // Add stylus css Files, fingerprinted to bust cache.
 var css = branch()
-  .use(addFiles('assets/styles.styl'))
-  .pattern('assets/styles.styl')
+  .use(addFiles('assets/css/index.styl'))
+  .pattern('assets/css/index.styl')
   .use(stylus({
     compress: !options.pretty,
     use: [nib()]
   }))
-  .use(fingerprint({pattern: ['assets/styles.css']}))
+  .use(fingerprint({pattern: ['assets/css/index.css']}))
 
 // Proccess Docs files and add the layout
 var views = branch('**/*.md')
@@ -33,12 +34,19 @@ var views = branch('**/*.md')
     gfm: true,
     tables: true
   }))
+  .use(navigation({
+    sidebar: {
+      includeDirs: true
+    }
+  }))
   .use(layouts({
     engine: 'jade',
     pretty: options.pretty,
     directory: './assets',
     default: 'layout.jade'
   }))
+  // .use(permalinks())
+  // .use(navigationTree())
 
 var build = metalsmith(__dirname)
   .source('app/docs')
