@@ -5,11 +5,11 @@
 
 ::-moz-selection
   text-shadow: none
-  background: #b4d5fe
+  background: #B10026
 
 ::selection
   text-shadow: none
-  background: #b4d5fe
+  background: #B10026
 
 html,
 body
@@ -19,17 +19,65 @@ body
   min-height: 100vh
 
 body
-  background-color: #f9f9f9
+  font-family: 'OpenSans'
+  color: #353535
+  background-color: #fefefe
 
-nav
+a
+  color: inherit
+  margin: 0
+  padding: 0
+  vertical-align: baseline
+  text-decoration: none
+  border-bottom: 1px solid rgba(#353535, .4)
+
+  &:hover
+    text-decoration: none
+    color: inherit
+    border-bottom-color: rgba(#353535, .8)
+
+  &:visited
+    color: inherit
+
+
+// Layout
+header
+  z-index: 10
   position: fixed
   left: 0
   top: 0
-  width: 200px
+  width: 100%
+  border-bottom: 1px solid rgba(#000, .07)
+  background: inherit
+
+  .logo
+    display: block
+    margin: 0 auto
+    padding: .3em
+    width: 40px
+
+nav
+  z-index: 5
+  position: fixed
+  left: 0
+  top: 0
+  padding-top: 3.6em
+  border-right: 1px solid rgba(#000, .07)
+  width: 15em
   height: 100%
   height: 100vh
   overflow: auto
-  background: green
+  background: inherit
+
+  @import 'sidebar'
+
 
 main
-  padding-left: 240px
+  padding: 4em 2em 3em
+  padding-left: 18em
+  max-width: 960px
+
+.md
+  @import 'markdown'
+
+@import 'fonts'

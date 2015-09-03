@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "name": "DemocracyOS/docs",
+      "path": ".",
+      "file_exclude_patterns": [
+        "app/*",
+        "*.sublime-workspace"
+      ]
+    }
+  ],
+  "settings": {
+    "binary_file_patterns":
+    [
+      ".tmp/*",
+      "tmp/*",
+      "log/*",
+      "build/*",
+      "app/*",
+      "node_modules/*",
+      "*.sublime-workspace",
+      "*.jpg",
+      "*.jpeg",
+      "*.png",
+      "*.gif",
+      "*.ttf",
+      "*.tga",
+      "*.dds",
+      "*.ico",
+      "*.eot",
+      "*.pdf",
+      "*.swf",
+      "*.jar",
+      "*.zip",
+      "*.svg"
+    ]
+  }
+}

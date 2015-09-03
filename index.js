@@ -6,11 +6,10 @@ var markdown = require('metalsmith-markdown')
 var fingerprint = require('metalsmith-fingerprint')
 var layouts = require('metalsmith-layouts')
 var stylus = require('metalsmith-stylus')
-var permalinks = require('metalsmith-permalinks')
 var navigation = require('metalsmith-navigation')
 var nib = require('nib')
 var addFiles = require('./plugins/add-files')
-var navigationTree = require('./plugins/navigation-tree')
+var assets = require('metalsmith-assets')
 
 options
   .option('-w, --watch', 'Serve and watch files.')
@@ -26,6 +25,18 @@ var css = branch()
     use: [nib()]
   }))
   .use(fingerprint({pattern: ['assets/css/index.css']}))
+
+var img = branch()
+  .use(assets({
+    source: './assets/img',
+    destination: './assets/img'
+  }))
+
+var fonts = branch()
+  .use(assets({
+    source: './assets/css/fonts',
+    destination: './assets/css/fonts'
+  }))
 
 // Proccess Docs files and add the layout
 var views = branch('**/*.md')
@@ -45,13 +56,12 @@ var views = branch('**/*.md')
     directory: './assets',
     default: 'layout.jade'
   }))
-  // .use(permalinks())
-  // .use(navigationTree())
 
 var build = metalsmith(__dirname)
   .source('app/docs')
   .destination('build')
   .use(css)
+  .use(img)
   .use(views)
 
 if (options.watch) build

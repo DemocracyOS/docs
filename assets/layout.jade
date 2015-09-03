@@ -5,7 +5,9 @@ html(lang='en')
     title #{title} | DemocracyOS Documentation
     link(rel='stylesheet', type='text/css', href='/' + fingerprint['assets/css/index.css'])
   body
+    header
+      img.logo(src='/assets/img/logo.svg')
     nav
       include ./partials/sidebar
-    main
+    main.md
       != contents
