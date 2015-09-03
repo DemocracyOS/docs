@@ -21,7 +21,7 @@ body
 body
   font-family: 'OpenSans'
   color: #353535
-  background-color: #fefefe
+  background: #fefefe
 
 a
   color: inherit
@@ -42,13 +42,22 @@ a
 
 // Layout
 header
-  z-index: 10
+  border-bottom: 1px solid rgba(#000, .07)
+  background: inherit
+
+nav
+  z-index: 5
   position: fixed
   left: 0
   top: 0
-  width: 100%
-  border-bottom: 1px solid rgba(#000, .07)
+  padding-top: 1em
+  border-right: 1px solid rgba(#000, .07)
+  width: 240px
+  height: 100%
+  height: 100vh
+  overflow: auto
   background: inherit
+  -webkit-overflow-scrolling: touch
 
   .logo
     display: block
@@ -56,28 +65,16 @@ header
     padding: .3em
     width: 40px
 
-nav
-  z-index: 5
-  position: fixed
-  left: 0
-  top: 0
-  padding-top: 3.6em
-  border-right: 1px solid rgba(#000, .07)
-  width: 15em
-  height: 100%
-  height: 100vh
-  overflow: auto
-  background: inherit
-
   @import 'sidebar'
 
-
 main
-  padding: 4em 2em 3em
-  padding-left: 18em
-  max-width: 960px
+  position: relative
+  padding-left: 15em
+  background: inherit
 
 .md
+  padding: 32px 32px 48px
+  max-width: 960px
   @import 'markdown'
 
 @import 'fonts'
