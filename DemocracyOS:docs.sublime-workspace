@@ -1,1 +1,3016 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"nav",
+				"navigation"
+			],
+			[
+				"navi",
+				"navigationTree"
+			],
+			[
+				"pa",
+				"pattern"
+			],
+			[
+				"new",
+				"newFiles"
+			],
+			[
+				"pro",
+				"program"
+			],
+			[
+				"des",
+				"destination	(build.js)"
+			],
+			[
+				"name",
+				"nameIsValid"
+			],
+			[
+				"find",
+				"findOne	(store.js)"
+			],
+			[
+				"topic",
+				"topicStore"
+			],
+			[
+				"filte",
+				"filteredItems"
+			],
+			[
+				"bus",
+				"busEmit"
+			],
+			[
+				"ar",
+				"args"
+			],
+			[
+				"top",
+				"topicFilter"
+			],
+			[
+				"render",
+				"renderItem"
+			],
+			[
+				"check",
+				"checked	(template.jade)"
+			],
+			[
+				"remove",
+				"removeable	(mixin.js)"
+			],
+			[
+				"const",
+				"constructor"
+			],
+			[
+				"append",
+				"appendTo"
+			],
+			[
+				"get",
+				"getSortName	(topic-filter.js)"
+			],
+			[
+				"proto",
+				"prototype	(multiple.js)"
+			],
+			[
+				"klass",
+				"klasses"
+			],
+			[
+				"query",
+				"querySelector"
+			],
+			[
+				"app",
+				"appendTo"
+			],
+			[
+				"cons",
+				"constructor	(topics-filter.js)"
+			],
+			[
+				"for",
+				"forEach	(topics-filter.js)"
+			],
+			[
+				"forum",
+				"forumStore	(forum-store.js)"
+			],
+			[
+				"selec",
+				"selected"
+			],
+			[
+				"findAll",
+				"findAllSorted"
+			],
+			[
+				"it",
+				"items"
+			],
+			[
+				"super",
+				"superagent"
+			],
+			[
+				"init",
+				"initSort"
+			],
+			[
+				"Topic",
+				"TopicFilter"
+			],
+			[
+				"all",
+				"all:load	(store.js)"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"Forum",
+				"ForumSchema"
+			],
+			[
+				"dele",
+				"deletedAt"
+			],
+			[
+				"_fetch",
+				"_fetchAbort"
+			],
+			[
+				"soft",
+				"softdelete	(forum.js)"
+			],
+			[
+				"topics",
+				"topicsFilter"
+			],
+			[
+				"create",
+				"create	(index.js)"
+			],
+			[
+				"sto",
+				"storage	(storage.js)"
+			],
+			[
+				"ne",
+				"newsfeed"
+			],
+			[
+				"fro",
+				"forums"
+			],
+			[
+				"facebook",
+				"facebookSignin"
+			],
+			[
+				"build",
+				"buildUrl"
+			],
+			[
+				"redi",
+				"redirect"
+			],
+			[
+				"middle",
+				"middlewares"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"face",
+				"facebook"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"resol",
+				"resolving"
+			],
+			[
+				"Toggl",
+				"ToggleDropdown"
+			],
+			[
+				"page",
+				"pageChanged"
+			],
+			[
+				"democracy",
+				"democracyos"
+			],
+			[
+				"debug",
+				"debugging"
+			],
+			[
+				"demo",
+				"democracyos"
+			],
+			[
+				"u",
+				"utils"
+			],
+			[
+				"expo",
+				"expose"
+			],
+			[
+				"load",
+				"loading"
+			],
+			[
+				"sign",
+				"signup"
+			],
+			[
+				"base",
+				"baseKeys"
+			],
+			[
+				"forEa",
+				"forEach"
+			],
+			[
+				"forEac",
+				"forEachLanguageFile"
+			],
+			[
+				"default",
+				"defaultTo"
+			],
+			[
+				"fe",
+				"featured_brands"
+			],
+			[
+				"fet",
+				"featured_variants"
+			],
+			[
+				"backgroun",
+				"background"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"color",
+				"color_slug"
+			],
+			[
+				"data",
+				"data-type"
+			],
+			[
+				"becom",
+				"become_brand"
+			],
+			[
+				"is",
+				"is_a"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"retur",
+				"returnTo"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"read",
+				"readAll"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"part",
+				"partials"
+			],
+			[
+				"settings",
+				"settings_dropdown"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"full",
+				"full_name"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"shop_",
+				"shop_admins"
+			],
+			[
+				"admin",
+				"admin_id"
+			],
+			[
+				"shop",
+				"shop_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 2100,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/metalsmith-browserify/lib/index.js",
+			"settings":
+			{
+				"buffer_size": 3130,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "plugins/add-files.js",
+			"settings":
+			{
+				"buffer_size": 535,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 1189,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/js/index.js",
+			"settings":
+			{
+				"buffer_size": 21,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/layout.jade",
+			"settings":
+			{
+				"buffer_size": 473,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/partials/sidebar.jade",
+			"settings":
+			{
+				"buffer_size": 664,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/css/index.styl",
+			"settings":
+			{
+				"buffer_size": 1179,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/css/sidebar.styl",
+			"settings":
+			{
+				"buffer_size": 241,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/css/markdown.styl",
+			"settings":
+			{
+				"buffer_size": 5349,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"copy path",
+				"File: Copy Path"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"settings use",
+				"Preferences: Settings - User"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"open",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"dee",
+				"File: Delete"
+			],
+			[
+				"dulp",
+				"File: Duplicate"
+			],
+			[
+				"open in ",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"r",
+				"File: Rename"
+			],
+			[
+				"ne file",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"new file",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"github",
+				"GitHubinator"
+			],
+			[
+				"git dif",
+				"Git: Diff All Files"
+			],
+			[
+				"git blame",
+				"Git: Blame"
+			],
+			[
+				"encod",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"copy pa",
+				"File: Copy Path"
+			],
+			[
+				"packa remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"duplica",
+				"File: Duplicate"
+			],
+			[
+				"renaem",
+				"File: Rename"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"renm",
+				"File: Rename"
+			],
+			[
+				"rea",
+				"Git: Reset (unstage) All"
+			],
+			[
+				"renae",
+				"File: Rename"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"duplic",
+				"File: Duplicate"
+			],
+			[
+				"dupl",
+				"File: Duplicate"
+			],
+			[
+				"",
+				"Browse Mode: Right Sidebar"
+			],
+			[
+				"brwo",
+				"Browse Mode: Current file or project"
+			],
+			[
+				"bmq",
+				"Browse Mode: Jump List Quick Panel"
+			],
+			[
+				"browse mode ",
+				"Browse Mode: Right Sidebar"
+			],
+			[
+				"browse Model:",
+				"Browse Mode: Left Sidebar"
+			],
+			[
+				"browse",
+				"Browse Mode: Current file or project"
+			],
+			[
+				"browse projec",
+				"Browse Mode: Current file or project"
+			],
+			[
+				"brow",
+				"Browse Mode: Current file or project"
+			],
+			[
+				"packa in",
+				"Package Control: Install Package"
+			],
+			[
+				"style",
+				"StyleSorter: Sort Stylesheet"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"packa ",
+				"Package Control: Install Package"
+			],
+			[
+				"diff al",
+				"Git: Diff All Files"
+			],
+			[
+				"dupli",
+				"File: Duplicate"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"packa ins",
+				"Package Control: Install Package"
+			],
+			[
+				"git dele",
+				"Git: Delete Branch"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"set mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"packa remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"piet",
+				"Project: Edit"
+			],
+			[
+				"git bla",
+				"Git: Blame"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"git diff ",
+				"Git: Diff All Files"
+			],
+			[
+				"git diff all",
+				"Git: Diff All Files"
+			],
+			[
+				"git diff al",
+				"Git: Diff All Files"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git dif all",
+				"Git: Diff All Files"
+			],
+			[
+				"git diff a",
+				"Git: Diff All Files"
+			],
+			[
+				"git blam",
+				"Git: Blame"
+			],
+			[
+				"github ",
+				"GitHubinator Blame"
+			],
+			[
+				"git balem",
+				"GitHubinator Blame on Master"
+			],
+			[
+				"copy pah",
+				"File: Copy Path From Project"
+			],
+			[
+				"copy pat",
+				"File: Copy Path From Project"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"dif",
+				"FileDiffs: Menu"
+			],
+			[
+				"delet",
+				"File: Delete"
+			],
+			[
+				"sftp ",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sft",
+				"SFTP: Edit Server…"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"key b",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"packa list",
+				"Package Control: List Packages"
+			],
+			[
+				"packa insta",
+				"Package Control: List Packages"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pakca list",
+				"Package Control: List Packages"
+			],
+			[
+				"reveal",
+				"File: Reveal"
+			],
+			[
+				"open brow",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"browser",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"settings",
+				"Preferences: Settings - Default"
+			],
+			[
+				"key bin",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"gt blame",
+				"Git: Blame"
+			],
+			[
+				"copy",
+				"File: Copy Path"
+			],
+			[
+				"path",
+				"File: Copy Path"
+			],
+			[
+				"jshint",
+				"JSHint"
+			],
+			[
+				"jshn",
+				"JSHint"
+			],
+			[
+				"dup",
+				"File: Duplicate"
+			],
+			[
+				"inde",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"git ",
+				"GitHubinator"
+			],
+			[
+				"setngs",
+				"Preferences: Settings - Default"
+			],
+			[
+				"m",
+				"File: Move"
+			],
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"settings de",
+				"Preferences: Settings - Default"
+			],
+			[
+				"key bind",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"key bindin",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 225.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tout/Sites/DemocracyOS/docs",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/js",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules/metalsmith-browserify",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules/metalsmith-browserify/lib"
+	],
+	"file_history":
+	[
+		"/Users/tout/Sites/DemocracyOS/docs/.gitignore",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/img/logo.svg",
+		"/Users/tout/Sites/DemocracyOS/docs/package.json",
+		"/Users/tout/Sites/DemocracyOS/docs/index.js",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/css/fonts.styl",
+		"/Users/tout/Desktop/RobotoSlab/RobotoSlab.css",
+		"/Users/tout/Desktop/OpenSans/OpenSans.css",
+		"/Users/tout/Sites/DemocracyOS/docs/app/docs/tutorials/sign-up.md",
+		"/Users/tout/Sites/DemocracyOS/docs/app/docs/tutorials/index.md",
+		"/Users/tout/Desktop/logo.svg",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/css/layout.styl",
+		"/Users/tout/Sites/DemocracyOS/docs/DemocracyOS:docs.sublime-project",
+		"/Users/tout/Desktop/fonts.md",
+		"/Users/tout/Sites/DemocracyOS/docs/app/tutorials/index.md",
+		"/Users/tout/Sites/DemocracyOS/docs/app/config/defaults.json",
+		"/Users/tout/Sites/DemocracyOS/docs/plugins/navigation-tree.js",
+		"/Users/tout/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/layout.jade",
+		"/Users/tout/Sites/DemocracyOS/docs/app/docs/navigation.md",
+		"/Users/tout/Sites/DemocracyOS/docs/app/docs/navigation.json",
+		"/Users/tout/Sites/DemocracyOS/docs/app/docs/deploying/index.md",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/css/lib/mini-reset.styl",
+		"/Users/tout/Sites/DemocracyOS/docs/plugins/addFiles.js",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules/metalsmith/lib/index.js",
+		"/Users/tout/Sites/DemocracyOS/docs/build/index.html",
+		"/Users/tout/Sites/DemocracyOS/docs/build/assets/index.css",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules/metalsmith-duo/lib/index.js",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules/metalsmith/package.json",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/index.styl",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/index.css",
+		"/Users/tout/Sites/DemocracyOS/docs/assets/css/index.styl",
+		"/Users/tout/Sites/DemocracyOS/docs/assets.js",
+		"/Users/tout/Sites/DemocracyOS/docs/serve.js",
+		"/Users/tout/Sites/DemocracyOS/docs/metalsmith.json",
+		"/Users/tout/Sites/DemocracyOS/docs/templates/partials/menu.jade",
+		"/Users/tout/Sites/DemocracyOS/docs/config.json",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules/wintersmith/lib/core/environment.js",
+		"/Users/tout/Sites/DemocracyOS/docs/contents/styles.css",
+		"/Users/tout/Sites/DemocracyOS/docs/templates/styles.css",
+		"/Users/tout/Sites/DemocracyOS/docs/views/index.styl",
+		"/Users/tout/Sites/DemocracyOS/docs/views/menu.jade",
+		"/Users/tout/Sites/DemocracyOS/docs/app/docs/menu.json",
+		"/Users/tout/Sites/DemocracyOS/docs/app/docs/index.md",
+		"/Users/tout/Sites/DemocracyOS/docs/README.md",
+		"/Users/tout/Sites/DemocracyOS/docs/.gitmodules",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules/wintersmith/lib/core/renderer.js",
+		"/Users/tout/Sites/DemocracyOS/docs/node_modules/wintersmith/lib/core/content.js",
+		"/Users/tout/Sites/DemocracyOS/docs/templates/index.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/config/defaults.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/server/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/notifications/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/package.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/forgot-api/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/boot/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/visibility/index.js",
+		"/Users/tout/Sites/projects/DemocracyOS:app-1-0-0.sublime-project",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/auth-facebook/strategy.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/utils/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/proposal-article/proposal-article.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/proposal/proposal.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/forum-form/styles.styl",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/forum-form/template.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/models/forum.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/en.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/models/tag.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/regexps/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/forum-form/forum-form.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/homepage/homepage.js",
+		"/Users/tout/Sites/DemocracyOS/app/.git/MERGE_MSG",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/auth-facebook/routes.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/layout/includes/fonts.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/.git/MERGE_MSG",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/admin-topics-form/styles.styl",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/admin-topics-form/template.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/admin-topics-form/view.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/signin/template.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/comments-view/template.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/form-view/form-view.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/db-api/forum.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/forum-api/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/admin-whitelists-form/form-view.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/models/forum-reserved-names.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/boot/boot-responsive.styl",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/header/styles.styl",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/boot/boot.styl",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/header/template.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/settings-profile/template.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/settings-profile/view.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/all.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/zh_TW.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/uk.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/sv.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/ru.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/pt.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/nl.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/it.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/hu.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/gl.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/fr.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/fi.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/es.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/de.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/lib/ca.json",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/translations/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/config/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/bin/dos-translate",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/auth-facebook/auth-facebook.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/comment/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/browser-update/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/admin/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/404/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/models/user.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/db-api/user.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/signup-api/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/signup-api/lib/signup.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/README.md",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/.eslintrc",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/proposal-article/template.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/proposal/body-serializer.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/proposal-article/clause.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/migrations/topic.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/proposal-clauses/proposal-clauses.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/l10n/supported.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/layout/index.jade",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/l10n/l10n.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/models/topic.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/topic-api/index.js",
+		"/Users/tout/Sites/DemocracyOS/app-1-0-0/lib/db-api/topic.js"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"<project>",
+			"/Users/tout/Sites/DemocracyOS/docs/node_modules/wintersmith",
+			"<project>",
+			"<project>, *.jade",
+			"<project>",
+			"/Users/tout/Sites/DemocracyOS/app-1-0-0/node_modules",
+			"<project>",
+			"/Users/tout/Dropbox/tout-mac/.zsh",
+			"/Users/tout/Dropbox/tout-mac",
+			"<project>",
+			"/Users/tout/Sites/DemocracyOS/app/components/javve/list.js/1.1.1",
+			"<project>",
+			"<project>,-/Users/tout/Sites/DemocracyOS/app/components/**/*",
+			"<project>,-/Users/tout/Sites/DemocracyOS/app/components",
+			"<project>,-/components/*",
+			"<project>",
+			"/Users/tout/Sites/DemocracyOS/app/node_modules/stylus/lib",
+			"<project>",
+			"<project>, *.json",
+			"<project>",
+			"/Users/tout/Sites/DemocracyOS/app/components",
+			"/Users/tout/Sites/DemocracyOS/app/components/democracyos/side-comments/update/confirmation",
+			"<project>, *.json",
+			"<project>",
+			"/Users/tout/Sites/DemocracyOS/app/lib/sidebar",
+			"<project>",
+			"/Users/tout/Sites/DemocracyOS/app/lib/sidebar",
+			"<project>",
+			"<open files>",
+			"<project>",
+			"<project>, *.js",
+			"<project>, *.jade",
+			"<project>, *.js",
+			"<project>",
+			"<project>, *.styl",
+			"<project>",
+			"<project>, */component.json",
+			"<project>",
+			"<project>, *.styl",
+			"<project>",
+			"<project>, *.js, *.jade",
+			"<project>",
+			"<project>, *.js, *.jade",
+			"<project>",
+			"<project>, *.js, *.jade",
+			"<project>, *.js, *.jade, *.json",
+			"<project>, *.js, *.jade",
+			"<project>",
+			"<project>, *.js, *.jade",
+			"<project>",
+			"<project>, *.js, *.jade",
+			"<project>",
+			"<project>, *.scss",
+			"<project>, *.rb",
+			"<project>",
+			"<project>, *.js",
+			"<project>",
+			"<project>, *.rb",
+			"<project>",
+			"<project>, *.yml",
+			"<project>",
+			"<project>, *.yml",
+			"<project>",
+			"<project>, *.haml",
+			"<project>, *.yml",
+			"<project>",
+			"<project>, *.haml",
+			"<project>",
+			"<project>, *.yml",
+			"<project>",
+			"<project>, *.yml",
+			"<project>",
+			"<project>, *.yml",
+			"<project>",
+			"<project>, *.yml",
+			"<project>",
+			"<project>, *.rb",
+			"<project>",
+			"<project>, *.rb",
+			"<project>",
+			"<project>, *.scss",
+			"<project>",
+			"<project>, *.yml",
+			"<project>",
+			"<project>, *.yml",
+			"<project>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"resolve",
+			"async",
+			"uglifify",
+			"browserify",
+			"./",
+			"240px",
+			"\"",
+			" {",
+			"\n}",
+			";",
+			"\"",
+			" 2em",
+			"h1,\nh2,\nh3,\nh4,\nh5,",
+			"url(data",
+			"url('",
+			" format('truetype')",
+			"url('",
+			" {",
+			";",
+			"F30E3F",
+			"353535",
+			"#F30E3F",
+			"selection",
+			"button",
+			", ",
+			";",
+			"    ",
+			"     ",
+			"    ",
+			"}",
+			" {",
+			" ",
+			"##",
+			"b4d5fe",
+			"rename",
+			"styles",
+			"'",
+			"==============================",
+			"break",
+			"continue",
+			"\"",
+			"navigationTree",
+			"\"",
+			"index",
+			"addSource",
+			"cb",
+			"duo",
+			"unyield",
+			"read(",
+			"source",
+			"glob",
+			"readdir",
+			"read(",
+			"read =",
+			"readFile",
+			"files.",
+			"duo",
+			"source",
+			"file",
+			"str",
+			"root",
+			"css",
+			"build",
+			"\"",
+			"..",
+			"')",
+			"path('",
+			"\"",
+			"path.resolve(__dirname, ",
+			"\"",
+			"scandir",
+			"contents",
+			"loadModule",
+			"loadViewModule",
+			"views",
+			"skipping",
+			"ignore",
+			".embedded",
+			"notifier",
+			"notif",
+			"notifica",
+			"notifi",
+			"visibility",
+			"/forgot",
+			"buildUrl",
+			"config",
+			"buildUrl",
+			"config",
+			"parseInt(port)",
+			"parseInt(",
+			"options.",
+			"delete options.port",
+			"==",
+			"baseUrl",
+			"publicPort",
+			"proposal-article",
+			"config.publicPort",
+			"buildUrl",
+			"url",
+			".form-group",
+			"input-group-addon",
+			"Democracy name",
+			"validators.invalid.forum",
+			"Invalid democracy name",
+			"regexps",
+			"`",
+			"publicEmails",
+			"auth/facebook/callback",
+			".form-group.closingAt",
+			"label.control-label",
+			"label.col-sm-2",
+			"#topic-wrapper",
+			"/api/topic",
+			"action=\"/api/topic",
+			".forgot",
+			"forgot",
+			"_handleError",
+			"this.messages(msg",
+			"_handleError",
+			"error",
+			", ",
+			"validateNameUniqueness",
+			"visibi",
+			"protoco",
+			"protocop",
+			"debug",
+			"public",
+			"translate3d"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"  ",
+			"TopicsListView",
+			"findTopics",
+			"findUserForum",
+			"findForum",
+			"findTopicsOfCurrentForum",
+			"getTopicsOfCurrentForum",
+			"\": \"",
+			"config.privacyPolicy",
+			"config.termsOfService",
+			"config.facebookSignin",
+			"facebookSignin",
+			"DemocracyOS",
+			"deploymentId",
+			"config.$1",
+			"spamLimit",
+			"rssEnabled",
+			"headerFontColor",
+			"headerBackgroundColor",
+			"usersWhitelist",
+			"logoMobile",
+			"homeLink",
+			"clientDebug",
+			"commentsPerPage",
+			"googleAnalyticsTrackingId",
+			"learnMoreUrl",
+			"organizationUrl",
+			"organizationName",
+			"corsDomains",
+			"settingsUrl",
+			"signupUrl",
+			"signinUrl",
+			"\"component/confirmation\": \"0.0.5\"",
+			"t('signin.signup')",
+			"t('signin.login')",
+			"",
+			"expose.ordinary",
+			"expose.confidential",
+			"404.back-to-democracyos",
+			"404.go-back-to",
+			"404.not-exists",
+			"comments.reply-cannot-be-empty",
+			"comments.cannot-be-empty",
+			"comments.argument-limited",
+			"'comment-vote.downvote'",
+			"'comment-vote.upvote'",
+			"comment-card.not-spam",
+			"'comment-card.report-spam'",
+			"comment-card.remove-argument",
+			"homepage.no-laws",
+			"comment-card.flagged-as-spam",
+			"proposal-options.must-be-signed-in",
+			"proposal-article.view-original-text",
+			"common.read-more",
+			"'admin-laws-form.url'",
+			"proposal-options.no-votes-cast",
+			"proposal-options.votes-cast",
+			"'common.edit'",
+			"'common.cancel'",
+			"'settings-notifications.no'",
+			"'settings-notifications.yes'",
+			"'proposal-options.abstain'",
+			"'proposal-options.nay'",
+			"'proposal-options.yea'",
+			"proposal-options.change-vote",
+			"proposal-options.voted-abstained",
+			"proposal-options.voted-nay",
+			"t('proposal-options.voted-yea')",
+			"t('proposal-options.vote-item')",
+			"'proposal-options.vote'",
+			"proposal-article.unknown-closing-date",
+			"article.unknown-closing-date",
+			"'common.closed'",
+			"'common.close'",
+			"'settings.save'",
+			"settings.save",
+			"settings.last-name",
+			"settings.first-name",
+			"signin.account-disabled",
+			"signup.validation-email-resent",
+			"signup.email-sent",
+			"signup.resend-email",
+			"signup.resend-validation-email-complete",
+			"'signup.resend-validation-email'",
+			"signup.being-redirected",
+			"t('signup.browsing'",
+			"signup.go-to",
+			"signup.now-can-vote",
+			"signup.email-validated",
+			"signup.check-email",
+			"signup.received",
+			"signup.welcome",
+			"t('signup.now')",
+			"t('signup.retype-password')",
+			"t('signup.lastname')",
+			"t('signup.firstname')",
+			"t('signup.your-lastname')",
+			"t('signup.your-firstname')",
+			"t('signup.lastname')",
+			"t('signup.email')",
+			"t('signup.with-email')",
+			"t('signup.complete')",
+			"t('signup.accepting')",
+			"t('comments.cannot-remove')",
+			"t('comments.not-yours')",
+			"t('comments.removing-argument')",
+			"t('common.more-information')",
+			"t('form.please-wait')",
+			"t('settings.password-invalid')",
+			"t('settings.password-updated')",
+			"t('settings.confirm-password')",
+			"t('settings.password-updated')",
+			"t('settings.current-password')",
+			"t('settings.change-password')",
+			"t('settings.successfuly-updated')",
+			"t('settings.paste-url-image')",
+			"t('settings.change-at-gravatar')",
+			"t('settings.sessions')",
+			"t('settings.profile')",
+			"t('settings.profile.title')",
+			".mobile-main-menu-wrapper",
+			"partials/mobile_main_menu",
+			"offcanvy",
+			"Offcanvy"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1825,
+								1836
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1100.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "node_modules/metalsmith-browserify/lib/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2926,
+								2926
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1208.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "plugins/add-files.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								207,
+								211
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								410,
+								410
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JSON (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "assets/js/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "assets/layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								469
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "assets/partials/sidebar.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								305,
+								305
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 7,
+					"file": "assets/css/index.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								997,
+								997
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 756.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "assets/css/sidebar.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27,
+								11
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "assets/css/markdown.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								517,
+								517
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 513.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.526435530675,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "DemocracyOS:docs.sublime-project",
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"indexjs",
+				"index.js"
+			],
+			[
+				"gitign",
+				".gitignore"
+			],
+			[
+				"partials/sidebar",
+				"assets/partials/sidebar.jade"
+			],
+			[
+				"layout",
+				"assets/layout.jade"
+			],
+			[
+				"defaul",
+				"app/config/defaults.json"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"defa",
+				"app/config/defaults.json"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"style",
+				"assets/styles.styl"
+			],
+			[
+				"gitin",
+				".gitignore"
+			],
+			[
+				"config",
+				"config.json"
+			],
+			[
+				"serverfactory",
+				"lib/server-factory/index.js"
+			],
+			[
+				"serverindex",
+				"lib/server/index.js"
+			],
+			[
+				"default",
+				"config/defaults.json"
+			],
+			[
+				"notifie",
+				"lib/notifications/index.js"
+			],
+			[
+				"lib/visibility",
+				"lib/visibility/index.js"
+			],
+			[
+				"lib/forgot-api",
+				"lib/forgot-api/index.js"
+			],
+			[
+				"utilindex",
+				"lib/utils/index.js"
+			],
+			[
+				"regexps",
+				"lib/regexps/index.js"
+			],
+			[
+				"modelforum",
+				"lib/models/forum.js"
+			],
+			[
+				"forumform",
+				"lib/forum-form/forum-form.js"
+			],
+			[
+				"homepa",
+				"lib/homepage/homepage.js"
+			],
+			[
+				"includes/fonts.jade",
+				"lib/layout/includes/fonts.jade"
+			],
+			[
+				"singinjade",
+				"lib/signin/template.jade"
+			],
+			[
+				"formview",
+				"lib/form-view/form-view.js"
+			],
+			[
+				"forumapi",
+				"lib/forum-api/index.js"
+			],
+			[
+				"dbapiforum",
+				"lib/db-api/forum.js"
+			],
+			[
+				"defal",
+				"config/defaults.json"
+			],
+			[
+				"transall",
+				"lib/translations/all.js"
+			],
+			[
+				"en",
+				"lib/translations/lib/en.json"
+			],
+			[
+				"lib/config/index.js",
+				"lib/config/index.js"
+			],
+			[
+				"bindtran",
+				"bin/dos-translate"
+			],
+			[
+				"enjson",
+				"lib/translations/lib/en.json"
+			],
+			[
+				"auth",
+				"lib/auth-facebook/auth-facebook.js"
+			],
+			[
+				"singupindex",
+				"lib/signup-api/index.js"
+			],
+			[
+				"dbapiuser",
+				"lib/db-api/user.js"
+			],
+			[
+				"modelsuser",
+				"lib/models/user.js"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"utils",
+				"lib/utils/index.js"
+			],
+			[
+				"l10n/supported.js",
+				"lib/l10n/supported.js"
+			],
+			[
+				"lib/proposal-clauses/proposal-clauses.js",
+				"lib/proposal-clauses/proposal-clauses.js"
+			],
+			[
+				"lib/db-api/topic.js",
+				"lib/db-api/topic.js"
+			],
+			[
+				"trans",
+				"lib/translations/index.js"
+			],
+			[
+				"topic-api/index.js",
+				"lib/topic-api/index.js"
+			],
+			[
+				"modelstopic",
+				"lib/models/topic.js"
+			],
+			[
+				"topictopci",
+				"lib/topic/topic.js"
+			],
+			[
+				"appj",
+				"public/app.js"
+			],
+			[
+				"storeso",
+				"lib/store/store.js"
+			],
+			[
+				"viewview",
+				"lib/view/view.js"
+			],
+			[
+				"forumroutercre",
+				"lib/forum-router/create-router.js"
+			],
+			[
+				"topictop",
+				"lib/topic/topic.js"
+			],
+			[
+				"store",
+				"lib/store/store.js"
+			],
+			[
+				"storesot",
+				"lib/store/store.js"
+			],
+			[
+				"topicstore",
+				"lib/topic-store/topic-store.js"
+			],
+			[
+				"devjs",
+				"config/development.json"
+			],
+			[
+				"useruser",
+				"lib/user/user.js"
+			],
+			[
+				"signinjade",
+				"lib/signin/template.jade"
+			],
+			[
+				"user",
+				"lib/user/user.js"
+			],
+			[
+				"memorycache",
+				"lib/store/memory-cache.js"
+			],
+			[
+				"stores",
+				"lib/store/store.js"
+			],
+			[
+				"-store",
+				"lib/forum-store/forum-store.js"
+			],
+			[
+				"defau",
+				"config/defaults.json"
+			],
+			[
+				"urlbifac",
+				"lib/url-builder/factory.js"
+			],
+			[
+				"topic/topic.js",
+				"lib/topic/topic.js"
+			],
+			[
+				"def",
+				"config/defaults.json"
+			],
+			[
+				"urlbuilder",
+				"lib/url-builder/url-builder.js"
+			],
+			[
+				"topictopic",
+				"lib/topic/topic.js"
+			],
+			[
+				"sidebarsi",
+				"lib/sidebar/sidebar.js"
+			],
+			[
+				"storestore",
+				"lib/store/store.js"
+			],
+			[
+				"admin-topics-form/view",
+				"lib/admin-topics-form/view.js"
+			],
+			[
+				"topicmide",
+				"lib/topic-middlewares/topic-middlewares.js"
+			],
+			[
+				"lib/feeds/proto.js",
+				"lib/feeds/proto.js"
+			],
+			[
+				"lib/sidebar/sidebar.js",
+				"lib/sidebar/sidebar.js"
+			],
+			[
+				"url",
+				"lib/url-builder/url-builder.js"
+			],
+			[
+				"render/render",
+				"lib/render/render.js"
+			],
+			[
+				"homepage",
+				"lib/homepage/homepage.js"
+			],
+			[
+				"bootbo",
+				"lib/boot/boot.js"
+			],
+			[
+				"jsjs",
+				"lib/build/js.js"
+			],
+			[
+				"bootjs",
+				"lib/boot/boot.js"
+			],
+			[
+				"boot",
+				"lib/boot/boot.js"
+			],
+			[
+				"appjs",
+				"public/app.js"
+			],
+			[
+				"paca",
+				"package.json"
+			],
+			[
+				"locals",
+				"lib/storage/strategies/localStorage.js"
+			],
+			[
+				"dev",
+				"config/development.json"
+			],
+			[
+				"topicfilter",
+				"lib/topic-filter/topic-filter.js"
+			],
+			[
+				"homepagehome",
+				"lib/homepage/homepage.js"
+			],
+			[
+				"dbapitopic",
+				"lib/db-api/topic.js"
+			],
+			[
+				"topictopi",
+				"lib/topic/topic.js"
+			],
+			[
+				"sidebarlist",
+				"lib/sidebar/list/list.js"
+			],
+			[
+				"topicap",
+				"lib/topic-api/index.js"
+			],
+			[
+				"sidebarside",
+				"lib/sidebar/sidebar.js"
+			],
+			[
+				"topicapi",
+				"lib/topic-api/index.js"
+			],
+			[
+				"sidebarlistlist",
+				"lib/sidebar/list/list.js"
+			],
+			[
+				"topic-middlewares",
+				"lib/topic-middlewares/topic-middlewares.js"
+			],
+			[
+				"sidebarsidebar",
+				"lib/sidebar/sidebar.js"
+			],
+			[
+				"storesotre",
+				"lib/store/store.js"
+			],
+			[
+				"proposal-clauses/proposal-clauses",
+				"lib/proposal-clauses/proposal-clauses.js"
+			],
+			[
+				"modeltopic",
+				"lib/models/topic.js"
+			],
+			[
+				"proposal-article",
+				"lib/proposal-article/proposal-article.js"
+			],
+			[
+				"topic-filter/topic-filter",
+				"lib/topic-filter/topic-filter.js"
+			],
+			[
+				"topicto",
+				"lib/topic/topic.js"
+			],
+			[
+				"urlbuilde",
+				"lib/url-builder/url-builder.js"
+			],
+			[
+				"storestor",
+				"lib/store/store.js"
+			],
+			[
+				"forumstore",
+				"lib/forum-store/forum-store.js"
+			],
+			[
+				"forummid",
+				"lib/forum-middlewares/forum-middlewares.js"
+			],
+			[
+				"forummidd",
+				"lib/forum-middlewares/forum-middlewares.js"
+			],
+			[
+				"deve",
+				"config/development.json"
+			],
+			[
+				"sotestore",
+				"lib/store/store.js"
+			],
+			[
+				"devjson",
+				"config/development.json"
+			],
+			[
+				"topicfilte",
+				"lib/topics-filter/topics-filter.js"
+			],
+			[
+				"buildcss",
+				"lib/build/css.js"
+			],
+			[
+				"forumdele",
+				"lib/settings-forum/delete-modal-view.js"
+			],
+			[
+				"topicfiltermiddl",
+				"lib/topic-filter/middlewares.js"
+			],
+			[
+				"sortsjs",
+				"lib/topic-filter/sorts.js"
+			],
+			[
+				"topicmidd",
+				"lib/topic-middlewares/topic-middlewares.js"
+			],
+			[
+				"topicstopci",
+				"lib/topics/topics.js"
+			],
+			[
+				"includes/placeholders",
+				"lib/layout/includes/placeholders.jade"
+			],
+			[
+				"viewmixin",
+				"lib/view/mixin.js"
+			],
+			[
+				"layoutindexj",
+				"lib/layout/index.jade"
+			],
+			[
+				"sidebarsidear",
+				"lib/sidebar/sidebar.js"
+			],
+			[
+				"topicpro",
+				"lib/topics/proto.js"
+			],
+			[
+				"layoutindex",
+				"lib/layout/index.jade"
+			],
+			[
+				"transindex",
+				"lib/translations/index.js"
+			],
+			[
+				"topicmiddle",
+				"lib/topic-middlewares/topic-middlewares.js"
+			],
+			[
+				"sidebarfilter",
+				"lib/sidebar/filter/filter.js"
+			],
+			[
+				"lib/homepage/homepage.js",
+				"lib/homepage/homepage.js"
+			],
+			[
+				"pakc",
+				"package.json"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "ccj",
+		"selected_items":
+		[
+			[
+				"ccj",
+				"~/Sites/ccj/ccj.sublime-project"
+			],
+			[
+				"mug",
+				"~/Sites/mugtalk/mugtalk.sublime-project"
+			],
+			[
+				"app",
+				"~/Sites/projects/DemocracyOS:app.sublime-project"
+			],
+			[
+				"",
+				"~/Sites/mugtalk/mugtalk.sublime-project"
+			],
+			[
+				"tout",
+				"~/Dropbox/tout-mac/tout-mac.sublime-project"
+			],
+			[
+				"ap",
+				"~/Sites/projects/DemocracyOS:app.sublime-project"
+			],
+			[
+				"conce",
+				"~/Sites/concesionopoly/concesionopoly.sublime-project"
+			],
+			[
+				"con",
+				"~/Sites/concesionopoly/concesionopoly.sublime-project"
+			],
+			[
+				"conces",
+				"~/Sites/concesionopoly/concesionopoly.sublime-project"
+			],
+			[
+				"piet",
+				"~/Sites/projects/piet.sublime-project"
+			],
+			[
+				"notifier",
+				"~/Sites/projects/DemocracyOS:notifier.sublime-project"
+			],
+			[
+				"laa",
+				"~/Sites/projects/labahiapirata.sublime-project"
+			],
+			[
+				"pet",
+				"~/Sites/projects/piet.sublime-project"
+			],
+			[
+				"manager",
+				"~/Sites/projects/DemocracyOS:manager.sublime-project"
+			],
+			[
+				"hub",
+				"~/Sites/projects/DemocracyOS:hub.sublime-project"
+			],
+			[
+				"manage",
+				"~/Sites/projects/DemocracyOS:manager.sublime-project"
+			],
+			[
+				"mana",
+				"~/Sites/projects/DemocracyOS:manager.sublime-project"
+			],
+			[
+				"fish",
+				"~/Sites/projects/fish.sublime-project"
+			],
+			[
+				"ma",
+				"~/Sites/projects/DemocracyOS:manager.sublime-project"
+			],
+			[
+				"man",
+				"~/Sites/projects/DemocracyOS:manager.sublime-project"
+			],
+			[
+				"manag",
+				"~/Sites/projects/DemocracyOS:manager.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"console",
+				"console"
+			],
+			[
+				"",
+				"$sel"
+			]
+		],
+		"width": 795.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

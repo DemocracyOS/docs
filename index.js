@@ -10,13 +10,23 @@ var navigation = require('metalsmith-navigation')
 var nib = require('nib')
 var addFiles = require('./plugins/add-files')
 var assets = require('metalsmith-assets')
+var browserify = require('metalsmith-browserify')
+var uglifyify = require('uglifyify')
 
 options
   .option('-w, --watch', 'Serve and watch files.')
   .option('-P, --pretty', 'Compile pretty assets.')
   .parse(process.argv)
 
-// Add stylus css Files, fingerprinted to bust cache.
+var js = branch()
+  .use(addFiles('assets/js/index.js'))
+  .use(browserify({
+    files: ['assets/js/index.js'],
+    dest: 'assets/js/index.js',
+    transforms: [uglifyify()]
+  }))
+  .use(fingerprint({pattern: ['assets/js/index.js']}))
+
 var css = branch()
   .use(addFiles('assets/css/index.styl'))
   .pattern('assets/css/index.styl')
@@ -60,6 +70,7 @@ var views = branch('**/*.md')
 var build = metalsmith(__dirname)
   .source('app/docs')
   .destination('build')
+  .use(js)
   .use(css)
   .use(img)
   .use(fonts)
