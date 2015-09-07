@@ -1,4 +1,5 @@
 var options = require('commander')
+var nib = require('nib')
 var metalsmith = require('metalsmith')
 var browserSync = require('metalsmith-browser-sync')
 var branch = require('metalsmith-branch')
@@ -7,11 +8,9 @@ var fingerprint = require('metalsmith-fingerprint')
 var layouts = require('metalsmith-layouts')
 var stylus = require('metalsmith-stylus')
 var navigation = require('metalsmith-navigation')
-var nib = require('nib')
-var addFiles = require('./plugins/add-files')
 var assets = require('metalsmith-assets')
-var browserify = require('metalsmith-browserify')
-var uglifyify = require('uglifyify')
+var addFiles = require('./plugins/add-files')
+var browserify = require('./plugins/browserify')
 
 options
   .option('-w, --watch', 'Serve and watch files.')
@@ -19,13 +18,12 @@ options
   .parse(process.argv)
 
 var js = branch()
-  .use(addFiles('assets/js/index.js'))
   .use(browserify({
-    files: ['assets/js/index.js'],
-    dest: 'assets/js/index.js',
-    transforms: [uglifyify()]
+    debug: options.pretty,
+    entries: ['assets/js/index.js'],
+    outfile: 'assets/js/index.js',
+    transforms: ['uglifyify']
   }))
-  .use(fingerprint({pattern: ['assets/js/index.js']}))
 
 var css = branch()
   .use(addFiles('assets/css/index.styl'))

@@ -6,10 +6,8 @@ html(lang='en')
     title #{title} | DemocracyOS Documentation
     link(rel='stylesheet', type='text/css', href='/' + fingerprint['assets/css/index.css'])
   body
-    nav
-      img.logo(src='/assets/img/logo.svg')
-      include ./partials/sidebar
+    include ./partials/sidebar
     main
       .md
         != contents
-    script(src=fingerprint['assets/js/index.js'])
+    script(src='/assets/js/index.js')

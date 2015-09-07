@@ -1,3 +1,4 @@
+@import 'nib'
 @import 'lib/mini-reset'
 
 *
@@ -39,42 +40,32 @@ a
   &:visited
     color: inherit
 
-
 // Layout
 header
   border-bottom: 1px solid rgba(#000, .07)
   background: inherit
 
-nav
-  z-index: 5
-  position: fixed
-  left: 0
-  top: 0
-  padding-top: 1em
-  border-right: 1px solid rgba(#000, .07)
-  width: 240px
-  height: 100%
-  height: 100vh
-  overflow: auto
-  background: inherit
-  -webkit-overflow-scrolling: touch
-
-  .logo
-    display: block
-    margin: 0 auto
-    padding: .3em
-    width: 60px
-
-  @import 'sidebar'
-
 main
   position: relative
-  padding-left: 15em
   background: inherit
+  overflow: hidden
+  transition: padding .15s ease-out
+
+  .sidebar-show &
+    transition: padding .15s ease-in
+    padding-left: 15em
+
+  @media (min-width: 768px)
+    padding-left: 15em
 
 .md
   padding: 32px 32px 48px
   max-width: 960px
+
+  @media (max-width: 767px)
+    min-width: 100vw
+
   @import 'markdown'
 
+@import 'sidebar'
 @import 'fonts'

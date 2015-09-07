@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node --harmony index.js",
-    "watch": "npm run build -- --watch",
+    "serve": "npm run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +25,9 @@
   "homepage": "https://github.com/DemocracyOS/docs#readme",
   "devDependencies": {
     "async": "^1.4.2",
+    "browserify": "^11.0.1",
     "commander": "^2.8.1",
+    "foreach": "^2.0.5",
     "glob": "^5.0.14",
     "jade": "^1.11.0",
     "metalsmith": "^2.0.1",
@@ -39,7 +41,10 @@
     "metalsmith-navigation": "^0.2.4",
     "metalsmith-rename": "^1.0.0",
     "metalsmith-stylus": "^1.0.0",
+    "mkdirp": "^0.5.1",
     "nib": "^1.1.0",
+    "sensor": "^0.1.0",
+    "swipeit": "0.0.1",
     "uglifyify": "^3.0.1"
   }
 }

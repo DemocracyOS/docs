@@ -1,17 +1,21 @@
-.sidebar
-  - var sidebar = navs.sidebar
-  each item in sidebar
-    - var file = item.type === 'file' ? item.file : item.children.find(function(i){ return 'index.html' === i.name }).file
-    - if (!file) continue
-    - var url = ('/' + file.nav_path).replace(/index\.html$/, '')
-    - var title = file.title
-    p.item(class=(item.type === 'dir' ? 'dir' : ''))
-      a(href=url)= title
+.sidebar-toggle(data-sidebar-toggle): div: span
 
-    each child in item.children
-      - if (child.name === 'index.html') continue
-      - var file = child.file
+nav.sidebar(data-sidebar)
+  img.logo(src='/assets/img/logo.svg')
+  .navigation
+    - var sidebar = navs.sidebar
+    each item in sidebar
+      - var file = item.type === 'file' ? item.file : item.children.find(function(i){ return 'index.html' === i.name }).file
       - if (!file) continue
       - var url = ('/' + file.nav_path).replace(/index\.html$/, '')
       - var title = file.title
-      p.item.child: a(href=url)= title
+      p.item(class=(item.type === 'dir' ? 'dir' : ''))
+        a(href=url)= title
+
+      each child in item.children
+        - if (child.name === 'index.html') continue
+        - var file = child.file
+        - if (!file) continue
+        - var url = ('/' + file.nav_path).replace(/index\.html$/, '')
+        - var title = file.title
+        p.item.child: a(href=url)= title
