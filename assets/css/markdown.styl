@@ -3,7 +3,8 @@ h2,
 h3,
 h4,
 h5
-  font-family: 'RobotoSlab'
+  font-family: 'Roboto Slab', serif
+  font-weight: 100
   line-height: 1.5
 
 h1
@@ -38,11 +39,16 @@ p
 
 ul,
 ol
-  padding: 0 0 0 1.1em
+  padding: 0
   margin: 0
 
 li
   line-height: 24px
+  list-style: none
+
+  &:before
+    content: ' · '
+    font-weight: 700
 
   ul
     margin-left: 24px
@@ -143,8 +149,8 @@ label,
 input,
 select,
 textarea
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-  font-size: 13px
+  font-family: inherit
+  font-size: inherit
   font-weight: normal
   line-height: normal
   margin-bottom: 18px
@@ -211,7 +217,7 @@ textarea:focus
 button
   display: inline-block
   padding: 4px 14px
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-family: inherit
   font-size: 13px
   line-height: 18px
   -webkit-border-radius: 4px

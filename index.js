@@ -40,12 +40,6 @@ var img = branch()
     destination: './assets/img'
   }))
 
-var fonts = branch()
-  .use(assets({
-    source: './assets/css/fonts',
-    destination: './assets/css/fonts'
-  }))
-
 // Proccess Docs files and add the layout
 var views = branch('**/*.md')
   .use(markdown({
