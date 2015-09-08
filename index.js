@@ -65,7 +65,6 @@ var build = metalsmith(__dirname)
   .use(js)
   .use(css)
   .use(img)
-  .use(fonts)
   .use(views)
 
 if (options.watch) build
