@@ -11,6 +11,7 @@ var navigation = require('metalsmith-navigation')
 var assets = require('metalsmith-assets')
 var addFiles = require('./plugins/add-files')
 var browserify = require('./plugins/browserify')
+var renderer = require('./plugins/markdown-renderer')
 
 options
   .option('-w, --watch', 'Serve and watch files.')
@@ -45,7 +46,8 @@ var views = branch('**/*.md')
   .use(markdown({
     smartypants: true,
     gfm: true,
-    tables: true
+    tables: true,
+    renderer: renderer
   }))
   .use(navigation({
     sidebar: {
