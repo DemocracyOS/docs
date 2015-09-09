@@ -14,13 +14,12 @@ h5
     visibility: visible
     opacity: 1
 
-
 .heading-anchor
   display: block
   position: absolute
   top: .2em
   right: 100%
-  width: .8em
+  width: 1em
   height: .8em
   background-size: .5em .5em
   background-repeat: no-repeat
@@ -74,16 +73,20 @@ ol
   margin-bottom: 1em
 
 li
+  position: relative
+  padding-left: 0.8em
   line-height: 24px
   list-style: none
 
   &:before
     content: ' · '
+    position: absolute
+    left: .2em
     padding-right: 3px
     font-weight: 700
 
   ul
-    margin-left: 24px
+    margin-left: 1.5em
 
 ul,
 ol
@@ -99,7 +102,12 @@ pre
 code
   font-family: Consolas, Monaco, Andale Mono, monospace
   line-height: 1.5
-  font-size: 13px
+  font-size: .8em
+  position: relative
+  padding: 0.3em .5em 0.2em
+  border-radius: 2px
+  top: -0.1em
+  background-color: #eee
 
 aside
   display: block
