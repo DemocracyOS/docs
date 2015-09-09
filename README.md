@@ -1,5 +1,13 @@
 # DemocracyOS Documentation Site
 
-Documentation site for [DemocracyOS](https://github.com/DemocracyOS/app).
+Documentation template site for [DemocracyOS](https://github.com/DemocracyOS/app).
 
-Converts markdown files on [`docs`](https://github.com/DemocracyOS/app/tree/1.0.0/docs) to html folder and builds the site using [Wintersmith](http://wintersmith.io/). to be used on `gh-pages`.
+## Commands
+
+`npm run build`: Builds the site to `/build` folder.
+
+`npm run serve`: Local server for development.
+
+`npm run deploy`: Builds the site and commits it to `gh-pages` branch. So, it will be visible on `http://democracyos.github.io/docs`
+
+Ω
