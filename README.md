@@ -2,9 +2,11 @@
 
 Documentation template site for [DemocracyOS](https://github.com/DemocracyOS/app).
 
+Content is taken from `/docs` folder on the [main](https://github.com/DemocracyOS/app) repo.
+
 ## Commands
 
-`npm run build`: Builds the site to `/build` folder.
+`npm run build`: Converts `/app/docs/**/*.md` files to `.html` using `/assets` for templating and saves it to `/build` folder.
 
 `npm run serve`: Local server for development.
 
