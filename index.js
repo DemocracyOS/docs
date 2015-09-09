@@ -51,6 +51,7 @@ var views = branch('**/*.md')
   }))
   .use(navigation({
     sidebar: {
+      sortBy: function (node){ return node && node.position || 999 },
       includeDirs: true
     }
   }))
