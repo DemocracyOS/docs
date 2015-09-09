@@ -3,9 +3,32 @@ h2,
 h3,
 h4,
 h5
+  position: relative
   font-family: 'Martel', serif
   font-weight: 200
   line-height: 1.5
+  cursor: default
+
+  &:hover .heading-anchor,
+  .heading-anchor:hover
+    visibility: visible
+    opacity: 1
+
+
+.heading-anchor
+  display: block
+  position: absolute
+  top: .2em
+  right: 100%
+  width: .8em
+  height: .8em
+  background-size: .5em .5em
+  background-repeat: no-repeat
+  background-position: center center
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjEwMjQiIHdpZHRoPSIxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGQ9Ik0yNTYgNTc2aDY0djY0aC02NGMtOTYgMC0xOTItMTA4LTE5Mi0yMjRzOTktMjI0IDE5Mi0yMjRoMjU2YzkzIDAgMTkyIDEwOCAxOTIgMjI0IDAgOTAtNTggMTc0LTEyOCAyMDh2LTc0YzM3LTI5IDY0LTgxIDY0LTEzNCAwLTgyLTY1LTE2MC0xMjgtMTYwSDI1NmMtNjMgMC0xMjggNzgtMTI4IDE2MHM2NCAxNjAgMTI4IDE2MHogbTU3Ni0xOTJoLTY0djY0aDY0YzY0IDAgMTI4IDc4IDEyOCAxNjBzLTY1IDE2MC0xMjggMTYwSDU3NmMtNjMgMC0xMjgtNzgtMTI4LTE2MCAwLTUzIDI3LTEwNSA2NC0xMzR2LTc0Yy03MCAzNC0xMjggMTE4LTEyOCAyMDggMCAxMTYgOTkgMjI0IDE5MiAyMjRoMjU2YzkzIDAgMTkyLTEwOCAxOTItMjI0cy05Ni0yMjQtMTkyLTIyNHoiIC8+Cjwvc3ZnPg==')
+  visibility: hidden
+  opacity: 0
+  transition: opacity .1s ease-in
 
 h1
   font-size: 2.1875em

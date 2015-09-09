@@ -8,6 +8,7 @@ var fingerprint = require('metalsmith-fingerprint')
 var layouts = require('metalsmith-layouts')
 var stylus = require('metalsmith-stylus')
 var navigation = require('metalsmith-navigation')
+var headingsidentifier = require('metalsmith-headings-identifier')
 var assets = require('metalsmith-assets')
 var addFiles = require('./plugins/add-files')
 var browserify = require('./plugins/browserify')
@@ -49,6 +50,7 @@ var views = branch('**/*.md')
     tables: true,
     renderer: renderer
   }))
+  .use(headingsidentifier())
   .use(navigation({
     sidebar: {
       sortBy: function (node){ return node && node.position || 999 },
