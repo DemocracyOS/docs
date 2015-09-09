@@ -1,5 +1,5 @@
+var url = require('url')
 var marked = require('marked')
-var isAbsoluteUrl = require('is-absolute-url')
 
 var renderer = new marked.Renderer()
 
@@ -10,8 +10,10 @@ var renderer = new marked.Renderer()
 var _link = renderer.link
 var isMd = /.md$/
 renderer.link = function (href, title, string){
-  if (!isAbsoluteUrl(href) && isMd.test(href)){
-    href = href.replace(isMd, '.html')
+  var u = url.parse(href)
+  if (!u.host && isMd.test(u.pathname)){
+    u.pathname = u.pathname.replace(isMd, '.html')
+    href = url.format(u)
   }
 
   return _link.call(renderer, href, title, string)
