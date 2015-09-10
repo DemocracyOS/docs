@@ -26,7 +26,7 @@ body
   background: #fefefe
 
 a
-  color: #D91F3E
+  color: darken(#D9203F, 10%)
   margin: 0
   padding: 0
   vertical-align: baseline
@@ -34,7 +34,10 @@ a
   font-weight: 400
 
   &:visited
-    color: #D91F3E
+    color: darken(#D9203F, 10%)
+
+  &:hover
+    color: darken(#D9203F, 20%)
 
 // Layout
 header
@@ -55,7 +58,7 @@ main
     padding-left: 12.5em
 
 .md
-  padding: 32px 32px 48px
+  padding: 0 32px 48px
   max-width: 640px
 
   @media (max-width: 767px)

@@ -11,5 +11,3 @@ Content is taken from `/docs` folder on the [main](https://github.com/DemocracyO
 `npm run serve`: Local server for development.
 
 `npm run deploy`: Builds the site and commits it to `gh-pages` branch. So, it will be visible on `http://democracyos.github.io/docs`
-
-Ω
