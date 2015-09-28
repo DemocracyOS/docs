@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Configuration | DemocracyOS Documentation</title><link rel="stylesheet" type="text/css" href="/assets/css/index-02c398aa69af1e0ea930fff89c55ef15.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to Sign Up?</a></p></div></nav><main><div class="md"><h1 id="configuration"><a class="heading-anchor" href="#configuration"><span></span></a>Configuration</h1>
+<p>In order to run DemocracyOS, some config settings are needed. These settings can be defined either as a JSON file following the <code>config/defaults.json</code>, or through environment variables.</p>
+<h2 id="overriding-defaults"><a class="heading-anchor" href="#overriding-defaults"><span></span></a>Overriding Defaults</h2>
+<p>Default config options will be loaded from <code>/config/defaults.json</code>. Also it will be used as reference for the <code>Type</code> the values should have.</p>
+<h3 id="configuration-files"><a class="heading-anchor" href="#configuration-files"><span></span></a>Configuration Files</h3>
+<p>Environment specific options can be added using <code>/config/{NODE_ENV}.json</code>. E.g.: If your <code>NODE_ENV</code> is <code>development</code> and a file at <code>/config/development.json</code> exists, the options there will override the ones at <code>/config/defaults.json</code>.</p>
+<p>You can generate configuration files using the command:</p>
+<pre><code>node ./bin/dos-install --config
+</code></pre><p>Or, for other environment than <code>development</code>:</p>
+<pre><code>NODE_ENV=production node ./bin/dos-install --config
+</code></pre><h3 id="environment-variables"><a class="heading-anchor" href="#environment-variables"><span></span></a>Environment Variables</h3>
+<p>Environment Variables also can be used to override options (recommended for <code>production</code>). <a href="https://help.ubuntu.com/community/EnvironmentVariables">Here&#x2019;s</a> explained how to manage environment variables on Linux/Mac.</p>
+<ul>
+<li>Var names should be <code>CONSTANT_CASE</code>.<ul>
+<li>e.g.: <code>mongoUrl</code> =&gt; <code>MONGO_URL</code></li>
+<li>Scoped variables e.g.: <code>notifications.url</code> =&gt; <code>NOTIFICATIONS_URL</code></li>
+</ul>
+</li>
+<li><code>Arrays</code>s should be strings separated by commas.<ul>
+<li>e.g.: <code>&quot;staff&quot;: [&quot;mail@eg.com&quot;, &quot;a@c.m&quot;]</code> =&gt; <code>STAFF=&quot;mail@eg.com,a@c.m&quot;</code></li>
+</ul>
+</li>
+<li><code>Boolean</code> values should be <code>true</code> or <code>false</code>.<ul>
+<li>e.g.: <code>&quot;rssEnabled&quot;: false</code> =&gt; <code>RSS_ENABLED=&quot;false&quot;</code></li>
+</ul>
+</li>
+</ul>
+<p><em>* For more info, the values are casted using <a href="https://github.com/DemocracyOS/app/blob/development/lib/config/cast-string.js"><code>lib/config/cast-string.js</code></a>.</em></p>
+<h2 id="configuration-values"><a class="heading-anchor" href="#configuration-values"><span></span></a>Configuration Values</h2>
+<h4 id="-locale-"><a class="heading-anchor" href="#-locale-"><span></span></a><strong>locale</strong></h4>
+<ul>
+<li>env: <code>LOCALE</code></li>
+<li>default: <code>en</code></li>
+</ul>
+<p>Default language. The app will be in this language for the user, unless it has a valid <code>Accept-Language</code> header, or changes it on his Settings.</p>
+<h4 id="-availablelocales-"><a class="heading-anchor" href="#-availablelocales-"><span></span></a><strong>availableLocales</strong></h4>
+<ul>
+<li>env: <code>AVAILABLE_LOCALES</code></li>
+<li>default: <code>[ ... ]</code></li>
+</ul>
+<p>Enabled languages. This are all the languages the user can select on the <code>/settings</code> page.</p>
+<h4 id="-protocol-"><a class="heading-anchor" href="#-protocol-"><span></span></a><strong>protocol</strong></h4>
+<ul>
+<li>env: <code>PROTOCOL</code></li>
+<li>default: <code>http</code></li>
+</ul>
+<p>Base protocol to be considered when building application URLs. Change it to <code>https</code> for SSL-enabled servers.</p>
+<h4 id="-host-"><a class="heading-anchor" href="#-host-"><span></span></a><strong>host</strong></h4>
+<ul>
+<li>env: <code>HOST</code></li>
+<li>default: <code>localhost</code></li>
+</ul>
+<p>Public accessible URL to your app. Used as base for internal URL building.</p>
+<h4 id="-publicport-"><a class="heading-anchor" href="#-publicport-"><span></span></a><strong>publicPort</strong></h4>
+<ul>
+<li>env: <code>PUBLIC_PORT</code></li>
+<li>default: <code>3000</code></li>
+</ul>
+<p>Port where the application should listen, and to be considered when building application URLs.</p>
+<h4 id="-mongourl-"><a class="heading-anchor" href="#-mongourl-"><span></span></a><strong>mongoUrl</strong></h4>
+<ul>
+<li>env: <code>MONGO_URL</code></li>
+<li>default: <code>mongodb://localhost/DemocracyOS-dev</code></li>
+</ul>
+<p>Full URL to your MongoDB storage solution. Including DB name.</p>
+<h4 id="-jwtsecret-"><a class="heading-anchor" href="#-jwtsecret-"><span></span></a><strong>jwtSecret</strong></h4>
+<ul>
+<li>env: <code>JWT_SECRET</code></li>
+</ul>
+<p>Secret signing key used for calculating and verifying the session signature. This value is required for encrypt and decrypt user sessions stored on cookies.</p>
+<h4 id="-corsdomains-"><a class="heading-anchor" href="#-corsdomains-"><span></span></a><strong>corsDomains</strong></h4>
+<ul>
+<li>env: <code>CORS_DOMAINS</code></li>
+<li>default: <code>[]</code></li>
+</ul>
+<p>Domains allowed for <code>Cross-Origin</code> requests. Set it to <code>[&quot;*&quot;]</code> to allow requests from everywhere.</p>
+<h4 id="-staff-"><a class="heading-anchor" href="#-staff-"><span></span></a><strong>staff</strong></h4>
+<ul>
+<li>env: <code>STAFF</code></li>
+<li>default: <code>[]</code></li>
+</ul>
+<p>Users with emails listed here will have access to <code>/admin</code>, and will be able to edit Topics, Tags, Whitelist users, etc&#x2026;</p>
+<h4 id="-allowemailaliases-"><a class="heading-anchor" href="#-allowemailaliases-"><span></span></a><strong>allowEmailAliases</strong></h4>
+<ul>
+<li>env: <code>ALLOW_EMAIL_ALIASES</code></li>
+<li>default: <code>true</code></li>
+</ul>
+<p>When this is <code>true</code>, the user will be able to register several times with the same email using alias like the <a href="https://support.google.com/mail/answer/12096">ones from Gmail</a>. Uses <a href="https://www.npmjs.com/package/verigy">Verigy</a> module.</p>
+<h4 id="-visibility-"><a class="heading-anchor" href="#-visibility-"><span></span></a><strong>visibility</strong></h4>
+<ul>
+<li>env: <code>VISIBILITY</code></li>
+<li>default: <code>visible</code></li>
+<li>options: <code>visible</code> | <code>hidden</code></li>
+</ul>
+<p>When <code>hidden</code> is selected, only registered users will be able to view the topics.</p>
+<h4 id="-userswhitelist-"><a class="heading-anchor" href="#-userswhitelist-"><span></span></a><strong>usersWhitelist</strong></h4>
+<ul>
+<li>env: <code>USERS_WHITELIST</code></li>
+<li>default: <code>false</code></li>
+</ul>
+<p>If this option is set to <code>true</code>, only users listed on <code>/admin/users</code> will be able to signin/signup. This doesn&#x2019;t affect <code>staff</code> users.</p>
+<h4 id="-multiforum-"><a class="heading-anchor" href="#-multiforum-"><span></span></a><strong>multiForum</strong></h4>
+<ul>
+<li>env: <code>MULTI_FORUM</code></li>
+<li>default: <code>false</code></li>
+</ul>
+<p>If this option is set to <code>true</code>, the application will be in a &#x201C;hub&#x201D; state and any user will be able to create it&#x2019;s own forum.</p>
+<p><em><strong>DISCLAIMER:</strong> This option is in ALPHA state, expect a lot a changes not far away.</em></p>
+<h4 id="-client-"><a class="heading-anchor" href="#-client-"><span></span></a><strong>client</strong></h4>
+<ul>
+<li>env: <code>CLIENT</code></li>
+<li>default: <code>[ ... ]</code></li>
+</ul>
+<p>Config options to be sended to the client, and usable from <code>/lib/config/config.js</code>. In most cases, this shouldn&#x2019;t be edited.</p>
+<h4 id="-forcesafeimageurls-"><a class="heading-anchor" href="#-forcesafeimageurls-"><span></span></a><strong>forceSafeImageURLs</strong></h4>
+<ul>
+<li>env: <code>FORCE_SAFE_IMAGE_URLS</code></li>
+<li>default: <code>true</code></li>
+</ul>
+<p>When <code>true</code>, the protocol of images added to Topics will be forcefully changed to <code>config.protocol</code>.</p>
+<h4 id="-spamlimit-"><a class="heading-anchor" href="#-spamlimit-"><span></span></a><strong>spamLimit</strong></h4>
+<ul>
+<li>env: <code>SPAM_LIMIT</code></li>
+<li>default: <code>5</code></li>
+</ul>
+<p>Absolute value of a negative score that an argument should reach to be flagged as spam.
+For example, if the value is 5, all arguments with score less or equal to -5 will be flagged as spam.</p>
+<h3 id="ssl"><a class="heading-anchor" href="#ssl"><span></span></a>SSL</h3>
+<p>Values needed to use <a href="https://es.wikipedia.org/wiki/Transport_Layer_Security">SSL</a>. Go to the <a href="install.html#using-ssl">SSL section</a> for installation instructions.</p>
+<h4 id="-https-serverkey-"><a class="heading-anchor" href="#-https-serverkey-"><span></span></a><strong>https.serverKey</strong></h4>
+<ul>
+<li>env: <code>HTTPS_SERVER_KEY</code></li>
+<li>default: <code>server.key</code></li>
+</ul>
+<p>Path to ssl key file.</p>
+<h4 id="-https-servercert-"><a class="heading-anchor" href="#-https-servercert-"><span></span></a><strong>https.serverCert</strong></h4>
+<ul>
+<li>env: <code>HTTPS_SERVER_CERT</code></li>
+<li>default: <code>server.crt</code></li>
+</ul>
+<p>Path to ssl certificate file.</p>
+<h4 id="-https-port-"><a class="heading-anchor" href="#-https-port-"><span></span></a><strong>https.port</strong></h4>
+<ul>
+<li>env: <code>HTTPS_PORT</code></li>
+<li>default: <code>443</code></li>
+</ul>
+<p>Port where the <code>https</code> server will listen to.</p>
+<h4 id="-https-redirect-"><a class="heading-anchor" href="#-https-redirect-"><span></span></a><strong>https.redirect</strong></h4>
+<ul>
+<li>env: <code>HTTPS_REDIRECT</code></li>
+<li>default: <code>normal</code></li>
+<li>options: <code>normal</code> | <code>reverse-proxy</code> | <code>azure</code> | <code>no-redirect</code></li>
+</ul>
+<p>Proxy redirection type to be used when redirecting the user from <code>HTTP</code> to <code>HTTPS</code>. Possible options:</p>
+<ul>
+<li><code>normal</code>: Normal redirection handled by the DemocracyOS nodejs server.</li>
+<li><code>reverse-proxy</code>: Redirection to HTTPS compatible with reverse-proxies (e.g.: Heroku/Nodejitsu/nginx).</li>
+<li><code>azure</code>: Redirection to HTTPS compatible with Windows Azure. Do NOT use outside Windows Azure; this can be easily spoofed outside their environment.</li>
+<li><code>no-redirect</code>: The redirection is not handled. Meant to be used on development only.</li>
+</ul>
+<h3 id="embebed-notifier-server"><a class="heading-anchor" href="#embebed-notifier-server"><span></span></a>Embebed Notifier Server</h3>
+<p>By default DemocracyOS uses an embeded <a href="https://github.com/DemocracyOS/notifier">Notifier</a>. This options are used to configure mailer transports (gmail, mailchimp, sendgrid, etc).</p>
+<h4 id="-notifications-mailer-service-"><a class="heading-anchor" href="#-notifications-mailer-service-"><span></span></a><strong>notifications.mailer.service</strong></h4>
+<ul>
+<li>env: <code>NOTIFICATIONS_MAILER_SERVICE</code></li>
+</ul>
+<p>Url of the Notifier server.</p>
+<h4 id="-notifications-mailer-auth-user-"><a class="heading-anchor" href="#-notifications-mailer-auth-user-"><span></span></a><strong>notifications.mailer.auth.user</strong></h4>
+<ul>
+<li>env: <code>NOTIFICATIONS_MAILER_AUTH_USER</code></li>
+</ul>
+<p>User for the <a href="https://github.com/DemocracyOS/notifier">notifier</a> transport.</p>
+<h4 id="-notifications-mailer-auth-pass-"><a class="heading-anchor" href="#-notifications-mailer-auth-pass-"><span></span></a><strong>notifications.mailer.auth.pass</strong></h4>
+<ul>
+<li>env: <code>NOTIFICATIONS_MAILER_AUTH_USER</code></li>
+</ul>
+<p>Password for the <a href="https://github.com/DemocracyOS/notifier">notifier</a> transport.</p>
+<h3 id="external-notifier-server"><a class="heading-anchor" href="#external-notifier-server"><span></span></a>External Notifier Server</h3>
+<p>In case you&#x2019;re using an external <a href="https://github.com/DemocracyOS/notifier-server">Notifier Server</a>, these are the options that need to be configured.</p>
+<h4 id="-notifications-url-"><a class="heading-anchor" href="#-notifications-url-"><span></span></a><strong>notifications.url</strong></h4>
+<ul>
+<li>env: <code>NOTIFICATIONS_URL</code></li>
+</ul>
+<p>Url of the Notifier server.</p>
+<h4 id="-notifications-token-"><a class="heading-anchor" href="#-notifications-token-"><span></span></a><strong>notifications.token</strong></h4>
+<ul>
+<li>env: <code>NOTIFICATIONS_TOKEN</code></li>
+</ul>
+<p>Token of the Notifier server.</p>
+<h3 id="facebook-login"><a class="heading-anchor" href="#facebook-login"><span></span></a>Facebook Login</h3>
+<p>Values needed to setup facebook login. For a complete guide on how to setup facebook login go to <a href="">Facebook Setup</a>.</p>
+<h4 id="-auth-facebook-username-"><a class="heading-anchor" href="#-auth-facebook-username-"><span></span></a><strong>auth.facebook.username</strong></h4>
+<ul>
+<li>env: <code>AUTH_FACEBOOK_CLIENT_ID</code></li>
+</ul>
+<p>App ID of your facebook app.</p>
+<h4 id="-auth-facebook-password-"><a class="heading-anchor" href="#-auth-facebook-password-"><span></span></a><strong>auth.facebook.password</strong></h4>
+<ul>
+<li>env: <code>AUTH_FACEBOOK_CLIENT_SECRET</code></li>
+</ul>
+<p>App Secret of your facebook app.</p>
+<h4 id="-auth-facebook-permissions-"><a class="heading-anchor" href="#-auth-facebook-permissions-"><span></span></a><strong>auth.facebook.permissions</strong></h4>
+<ul>
+<li>env: <code>AUTH_FACEBOOK_PERMISSIONS</code></li>
+<li>default: <code>[ &quot;email&quot; ]</code></li>
+</ul>
+<p>Data to access from the user&#x2019;s facebook account. <code>email</code> is the only one needed for DemocracyOS. More info on <a href="https://developers.facebook.com/docs/facebook-login/permissions">Facebook Permissions</a></p>
+<h3 id="basic-http-authentication"><a class="heading-anchor" href="#basic-http-authentication"><span></span></a>Basic HTTP authentication</h3>
+<p>Values needed to setup <a href="https://en.wikipedia.org/wiki/Basic_access_authentication">Basic HTTP authentication</a> on the application.</p>
+<h4 id="-auth-basic-username-"><a class="heading-anchor" href="#-auth-basic-username-"><span></span></a><strong>auth.basic.username</strong></h4>
+<ul>
+<li>env: <code>AUTH_BASIC_USERNAME</code></li>
+</ul>
+<p>Authentication Username.</p>
+<h4 id="-auth-basic-password-"><a class="heading-anchor" href="#-auth-basic-password-"><span></span></a><strong>auth.basic.password</strong></h4>
+<ul>
+<li>env: <code>AUTH_BASIC_PASSWORD</code></li>
+</ul>
+<p>Authentication Password.</p>
+<h3 id="independant-users-database"><a class="heading-anchor" href="#independant-users-database"><span></span></a>Independant Users Database</h3>
+<p>Values only needed if you want to have a different database for <code>users</code>. This allows, for example, to have different instances of DemocracyOS but share the same <code>users</code> collection, so they could register only once.</p>
+<h4 id="-mongousersurl-"><a class="heading-anchor" href="#-mongousersurl-"><span></span></a><strong>mongoUsersUrl</strong></h4>
+<ul>
+<li>env: <code>MONGO_USERS_URL</code></li>
+</ul>
+<p>Full URL to your MongoDB storage solution.</p>
+<h4 id="-signinurl-"><a class="heading-anchor" href="#-signinurl-"><span></span></a><strong>signinUrl</strong></h4>
+<ul>
+<li>env: <code>SIGNIN_URL</code></li>
+</ul>
+<p>URL to redirect the users when gets to the signin page (<code>/singin</code>).</p>
+<h4 id="-signupurl-"><a class="heading-anchor" href="#-signupurl-"><span></span></a><strong>signupUrl</strong></h4>
+<ul>
+<li>env: <code>SIGNUP_URL</code></li>
+</ul>
+<p>URL to redirect the users when gets to the signup page (<code>/signup</code>).</p>
+<h4 id="-settingsurl-"><a class="heading-anchor" href="#-settingsurl-"><span></span></a><strong>settingsUrl</strong></h4>
+<ul>
+<li>env: <code>SETTINGS_URL</code></li>
+</ul>
+<p>URL to redirect the users when gets to the settings page (<code>/settings</code>).</p>
+<h3 id="user-tracking"><a class="heading-anchor" href="#user-tracking"><span></span></a>User Tracking</h3>
+<h4 id="-googleanalyticstrackingid-"><a class="heading-anchor" href="#-googleanalyticstrackingid-"><span></span></a><strong>googleAnalyticsTrackingId</strong></h4>
+<ul>
+<li>env: <code>GOOGLE_ANALYTICS_TRACKING_ID</code></li>
+</ul>
+<p>Set this options to enable <a href="http://www.google.com/analytics/">Google Analytics</a> tracking.</p>
+<h4 id="-segmentkey-"><a class="heading-anchor" href="#-segmentkey-"><span></span></a><strong>segmentKey</strong></h4>
+<ul>
+<li>env: <code>SEGMENT_KEY</code></li>
+</ul>
+<p>Set this options to enable <a href="https://segment.com/">Segment</a> tracking.</p>
+<h3 id="application-styles"><a class="heading-anchor" href="#application-styles"><span></span></a>Application Styles</h3>
+<h4 id="-logo-"><a class="heading-anchor" href="#-logo-"><span></span></a><strong>logo</strong></h4>
+<ul>
+<li>env: <code>LOGO</code></li>
+<li>default: <code>/boot/logo.png</code></li>
+</ul>
+<p>URL of the logo to be used on the header.</p>
+<h4 id="-logomobile-"><a class="heading-anchor" href="#-logomobile-"><span></span></a><strong>logoMobile</strong></h4>
+<ul>
+<li>env: <code>LOGO_MOBILE</code></li>
+<li>default: <code>/boot/logo-mobile.png</code></li>
+</ul>
+<p>Optional, URL of the logo to be used on the header when the width of the screen is less than <code>700px</code>.</p>
+<h4 id="-homelink-"><a class="heading-anchor" href="#-homelink-"><span></span></a><strong>homeLink</strong></h4>
+<ul>
+<li>env: <code>HOME_LINK</code></li>
+<li>default: <code>/</code></li>
+</ul>
+<p>Where to take the user when click the <code>logo</code> on header.</p>
+<h4 id="-favicon-"><a class="heading-anchor" href="#-favicon-"><span></span></a><strong>favicon</strong></h4>
+<ul>
+<li>env: <code>FAVICON</code></li>
+<li>default: <code>/boot/favicon.ico</code></li>
+</ul>
+<p>URL of the <a href="https://es.wikipedia.org/wiki/Favicon">favicon</a>.</p>
+<h4 id="-organizationname-"><a class="heading-anchor" href="#-organizationname-"><span></span></a><strong>organizationName</strong></h4>
+<ul>
+<li>env: <code>ORGANIZATION_NAME</code></li>
+<li>default: <code>DemocracyOS on GitHub</code></li>
+</ul>
+<p>Title of the app to be shown on the right side of the header.</p>
+<h4 id="-organizationurl-"><a class="heading-anchor" href="#-organizationurl-"><span></span></a><strong>organizationUrl</strong></h4>
+<ul>
+<li>env: <code>ORGANIZATION_URL</code></li>
+<li>default: <code>https://github.com/DemocracyOS/app</code></li>
+</ul>
+<p>Link to take the user when clicks on <code>organizationName</code>.</p>
+<h4 id="-organizationemail-"><a class="heading-anchor" href="#-organizationemail-"><span></span></a><strong>organizationEmail</strong></h4>
+<ul>
+<li>env: <code>ORGANIZATION_EMAIL</code></li>
+<li>default: <code>no-reply@democracyos.org</code></li>
+</ul>
+<p>Sender email to show on all email notifications.</p>
+<h4 id="-headerbackgroundcolor-"><a class="heading-anchor" href="#-headerbackgroundcolor-"><span></span></a><strong>headerBackgroundColor</strong></h4>
+<ul>
+<li>env: <code>HEADER_BACKGROUND_COLOR</code></li>
+<li>default: <code>#7d4489</code></li>
+</ul>
+<p>Background color of the header.</p>
+<h4 id="-headerfontcolor-"><a class="heading-anchor" href="#-headerfontcolor-"><span></span></a><strong>headerFontColor</strong></h4>
+<ul>
+<li>env: <code>HEADER_FONT_COLOR</code></li>
+<li>default: <code>#fff</code></li>
+</ul>
+<p>Color of the header&#x2019;s texts.</p>
+<h4 id="-headercontrast-"><a class="heading-anchor" href="#-headercontrast-"><span></span></a><strong>headerContrast</strong></h4>
+<ul>
+<li>env: <code>HEADER_CONTRAST</code></li>
+<li>default: <code>false</code></li>
+</ul>
+<p>When <code>true</code> will add a little shadow to the header. Recommended to be used when the color of the header doesn&#x2019;t create contrast with the white background.</p>
+<h3 id="static-pages"><a class="heading-anchor" href="#static-pages"><span></span></a>Static Pages</h3>
+</div></main><script src="/assets/js/index.js"></script></body></html>

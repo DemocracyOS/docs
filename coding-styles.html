@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Coding Styles | DemocracyOS Documentation</title><link rel="stylesheet" type="text/css" href="/assets/css/index-02c398aa69af1e0ea930fff89c55ef15.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to Sign Up?</a></p></div></nav><main><div class="md"><h1 id="coding-styles"><a class="heading-anchor" href="#coding-styles"><span></span></a>Coding Styles</h1>
+<h2 id="git-conventions"><a class="heading-anchor" href="#git-conventions"><span></span></a>GIT conventions</h2>
+<p>In general terms, we agree with almost everything said in this <a href="https://medium.com/code-adventures/a940ee20862d">blog post about GIT conventions</a> and so should you. We only add/differ the following:</p>
+<p>Commits should try to be as simple (atomic) as possible, but not simpler. Meaning you should always be able to revert specific <code>fix</code>es, <code>edit</code>s, <code>update</code>s, <code>add</code>s, and <code>remove</code>s with <code>git revert</code></p>
+<h2 id="javascript"><a class="heading-anchor" href="#javascript"><span></span></a>Javascript</h2>
+<ul>
+<li>Two spaces for indentation, never tabs.</li>
+<li><code>var</code> everything, never comma first.</li>
+<li>Single quotes only, never double quotes (opposite to HTML/Jade).</li>
+<li>Avoid trailing whitespace. Blank lines should not have any space.</li>
+<li>Inline documentation for new methods, class members, etc.</li>
+<li>One space between conditionals/functions, and their parenthesis and curly braces<ul>
+<li><code>if (..) {</code></li>
+<li><code>for (..) {</code></li>
+<li><code>while (..) {</code></li>
+<li><code>function (err) {</code></li>
+</ul>
+</li>
+<li>Use <a href="https://en.wikipedia.org/wiki/Yoda_conditions">Yoda conditions</a>, always <code>&apos;string&apos; === typeof el</code> instead of <code>typeof el === &apos;string&apos;</code>.</li>
+</ul>
+<h2 id="stylesheets"><a class="heading-anchor" href="#stylesheets"><span></span></a>Stylesheets</h2>
+<ul>
+<li>See <a href="/.stylintrc">.stylintrc</a> file. More info: <a href="https://rosspatton.github.io/stylint/">https://rosspatton.github.io/stylint/</a></li>
+<li>For module specific styles, comply with <code>#unique-template-top-node-selector .my-generic-css-update { ... }</code></li>
+<li><code>.classes</code> and <code>#ids</code> should only be used to reference from <code>CSS</code> files. If you want to use some element from <code>JS</code> use <code>data-*</code> to always be sure where the element is referenced from.</li>
+<li>For multiple, comma-separated selectors, place each selector on its own line.</li>
+<li>Attribute selectors, like <code>input[type=&quot;text&quot;]</code> should always wrap the attribute&#x2019;s value in double quotes, for consistency and safety (see this <a href="http://mathiasbynens.be/notes/unquoted-attribute-values">blog post on unquoted attribute values</a> that can lead to XSS attacks).</li>
+</ul>
+<h2 id="html-jade"><a class="heading-anchor" href="#html-jade"><span></span></a>HTML/Jade</h2>
+<ul>
+<li>Two spaces for indentation, never tabs.</li>
+<li>Double quotes only, never single quotes.</li>
+<li>Avoid trailing whitespace. Blank lines should not have any space.</li>
+<li>Use CDNs and HTTPS for third-party JS when possible. We don&#x2019;t use protocol-relative URLs in this case because they break when viewing the page locally via `file://.</li>
+</ul>
+<h2 id="local-modules"><a class="heading-anchor" href="#local-modules"><span></span></a>Local Modules</h2>
+<ul>
+<li>Each Module should be placed in it&#x2019;s containing folder on <code>/lib</code>, as <a href="https://github.com/rickyrauch/nodejs-starter">NodeJS Starter</a>. <em>(e.g. <code>/lib/sidebar</code>, <code>/lib/models</code>)</em></li>
+<li>Entry points:<ul>
+<li><strong>Server side JS:</strong> <code>index.js</code>. <em>(e.g. <code>/lib/db-api/index.js</code>)</em></li>
+<li><strong>Client side JS:</strong> <code>${module-name}.js</code>. <em>(e.g. <code>/lib/sidebar/sidebar.js</code>)</em></li>
+<li><strong>Client side CSS:</strong> <code>styles.styl</code>. <em>(e.g. <code>/lib/sidebar/styles.js</code>)</em></li>
+<li>Main <code>HTML</code> template file is <code>template.jade</code>. <em>(e.g. <code>/lib/sidebar/template.jade</code>)</em></li>
+</ul>
+</li>
+</ul>
+</div></main><script src="/assets/js/index.js"></script></body></html>

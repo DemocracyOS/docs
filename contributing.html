@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Contributing | DemocracyOS Documentation</title><link rel="stylesheet" type="text/css" href="/assets/css/index-02c398aa69af1e0ea930fff89c55ef15.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to Sign Up?</a></p></div></nav><main><div class="md"><h1 id="contributing-to-democracyos"><a class="heading-anchor" href="#contributing-to-democracyos"><span></span></a>Contributing to DemocracyOS</h1>
+<p>If you have a question about DemocracyOS (not a bug report) please post it to our <a href="http://groups.google.com/group/democracyos-app">mailing list</a> or on <a href="https://gitter.im/DemocracyOS/app">Gitter</a>.</p>
+<h2 id="reporting-bugs-requesting-features"><a class="heading-anchor" href="#reporting-bugs-requesting-features"><span></span></a>Reporting bugs / Requesting features</h2>
+<p>For practical reasons we only accept issues that are bug reports or feature requests. Make sure to read the following guidelines before opening new issues.</p>
+<h3 id="avoid-duplication"><a class="heading-anchor" href="#avoid-duplication"><span></span></a>Avoid duplication</h3>
+<p>You&#x2019;d help us out a lot by first checking if someone else has reported the same issue. Moreover, the issue may have already been resolved with a fix available.</p>
+<h3 id="help-us-help-you"><a class="heading-anchor" href="#help-us-help-you"><span></span></a>Help us help you</h3>
+<p>Share as much information as possible. Include operating system and version, browser and version, version of DemocracyOS. Also include steps to reproduce the bug and any logs from browser and/or process whenever possible.</p>
+<p>A good approach to a bug report is being very clear on how to reproduce it. Following this template might help (kudos to <a href="https://github.com/bastianhell">@bastianhell</a>):</p>
+<blockquote>
+<ol>
+<li>Run app with <code>make</code></li>
+<li>Navigate to <code>/route</code></li>
+<li>Click on <code>button</code> and see error in <code>console</code> output</li>
+</ol>
+<p>Results: What is the actual result that makes it a bug? (e.g: Misaligned text in header, see attached snapshot, etc.)</p>
+<p>Expected results: What should it look like? (e.g.: text in header should be aligned with dropdowns, etc.)</p>
+</blockquote>
+<h2 id="pull-requests"><a class="heading-anchor" href="#pull-requests"><span></span></a>Pull requests</h2>
+<p>To contribute code, start by forking our repo on github. You&#x2019;ll get something like this:</p>
+<pre><code>https://github.com/user/app
+</code></pre><p>Then clone your fork:</p>
+<pre><code>git clone git@github.com:user/app &amp;&amp; cd app/
+</code></pre><p>Add the official repo as a remote, to track changes:</p>
+<pre><code>git remote add upstream git@github.com:DemocracyOS/app.git
+</code></pre><p>Create a new branch for the changes you are going to contribute, with a relevant name. Some examples:</p>
+<pre><code>git checkout -b feature/some-new-stuff
+git checkout -b fix/some-bug
+git checkout -b remove/some-file
+</code></pre><p>Hack your changes: (you don&#x2019;t need to actually run this)</p>
+<pre><code>vim somefile.txt
+git add somefile.txt
+git commit -a -m&quot;adding somefile.txt&quot;
+</code></pre><p>When you think your code is ready, prepare for pushing the code by first getting the changes from the main repo:</p>
+<pre><code>git pull --rebase upstream development
+</code></pre><p>(You may need to solve any conflicts from the rebase at this point)</p>
+<p>After that you can push the changes to your fork, by doing:</p>
+<pre><code>git push origin feature/some-new-stuff
+git push origin fix/some-bug
+</code></pre><p>Finally go to <code>https://github.com/DemocracyOS/app</code> in the browser and issue a new pull request. Github normally recognizes you have pending changes in a new branch and will suggest creating the pull request.</p>
+<p>Main contributors will review your code and possibly ask for changes before your code is pulled in to the main repository. We appreciate your time and efforts!</p>
+<h3 id="general-guidelines"><a class="heading-anchor" href="#general-guidelines"><span></span></a>General guidelines</h3>
+<ul>
+<li>We flag the issues to community participation as <a href="https://github.com/DemocracyOS/app/labels/help%20wanted">help wanted</a>, try to prioritize these.</li>
+<li>Do not make a pull request withouth having run the app on your own. This means, you have to at least <a href="http://en.wikipedia.org/wiki/Smoke_testing_(software">smoke test</a>)  what you did. If you can include some tests with your PR, all the better.</li>
+<li>Try not to pollute your pull request with unintended changes. Keep them simple and small. Unrelated commits will prevent us from merging.</li>
+<li>Pull requests should always be against the <code>development</code> branch, never against <code>master</code>.</li>
+<li>All pull requests must comply with the project&#x2019;s <a href="coding-styles.html">Coding Styles</a>.</li>
+</ul>
+</div></main><script src="/assets/js/index.js"></script></body></html>
