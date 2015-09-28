@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Configuration | DemocracyOS Documentation</title><link rel="stylesheet" type="text/css" href="/assets/css/index-02c398aa69af1e0ea930fff89c55ef15.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to Sign Up?</a></p></div></nav><main><div class="md"><h1 id="configuration"><a class="heading-anchor" href="#configuration"><span></span></a>Configuration</h1>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Configuration | DemocracyOS Documentation</title><link rel="stylesheet" type="text/css" href="/assets/css/index-84ec9c7dd13192791ab04c843c9188d5.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to sign up?</a></p><p class="item child"><a href="/tutorials/forgot-password.html">How to recover your password?</a></p><p class="item child"><a href="/tutorials/create-a-democracy.html">How to create a Democracy?</a></p><p class="item child"><a href="/tutorials/create-a-tag.html">How to create a Tag?</a></p><p class="item child"><a href="/tutorials/create-a-topic.html">How to create a Topic?</a></p></div></nav><main><div class="md"><h1 id="configuration"><a class="heading-anchor" href="#configuration"><span></span></a>Configuration</h1>
 <p>In order to run DemocracyOS, some config settings are needed. These settings can be defined either as a JSON file following the <code>config/defaults.json</code>, or through environment variables.</p>
 <h2 id="overriding-defaults"><a class="heading-anchor" href="#overriding-defaults"><span></span></a>Overriding Defaults</h2>
 <p>Default config options will be loaded from <code>/config/defaults.json</code>. Also it will be used as reference for the <code>Type</code> the values should have.</p>
@@ -164,7 +164,7 @@ For example, if the value is 5, all arguments with score less or equal to -5 wil
 <ul>
 <li>env: <code>NOTIFICATIONS_MAILER_SERVICE</code></li>
 </ul>
-<p>Url of the Notifier server.</p>
+<p>Notifier service. Any of <a href="https://github.com/andris9/nodemailer-wellknown#supported-services">nodemailer-wellknown</a>.</p>
 <h4 id="-notifications-mailer-auth-user-"><a class="heading-anchor" href="#-notifications-mailer-auth-user-"><span></span></a><strong>notifications.mailer.auth.user</strong></h4>
 <ul>
 <li>env: <code>NOTIFICATIONS_MAILER_AUTH_USER</code></li>
@@ -172,7 +172,7 @@ For example, if the value is 5, all arguments with score less or equal to -5 wil
 <p>User for the <a href="https://github.com/DemocracyOS/notifier">notifier</a> transport.</p>
 <h4 id="-notifications-mailer-auth-pass-"><a class="heading-anchor" href="#-notifications-mailer-auth-pass-"><span></span></a><strong>notifications.mailer.auth.pass</strong></h4>
 <ul>
-<li>env: <code>NOTIFICATIONS_MAILER_AUTH_USER</code></li>
+<li>env: <code>NOTIFICATIONS_MAILER_AUTH_PASS</code></li>
 </ul>
 <p>Password for the <a href="https://github.com/DemocracyOS/notifier">notifier</a> transport.</p>
 <h3 id="external-notifier-server"><a class="heading-anchor" href="#external-notifier-server"><span></span></a>External Notifier Server</h3>
@@ -312,4 +312,111 @@ For example, if the value is 5, all arguments with score less or equal to -5 wil
 </ul>
 <p>When <code>true</code> will add a little shadow to the header. Recommended to be used when the color of the header doesn&#x2019;t create contrast with the white background.</p>
 <h3 id="static-pages"><a class="heading-anchor" href="#static-pages"><span></span></a>Static Pages</h3>
+<h4 id="-frequentlyaskedquestions-"><a class="heading-anchor" href="#-frequentlyaskedquestions-"><span></span></a><strong>frequentlyAskedQuestions</strong></h4>
+<ul>
+<li>env: <code>FREQUENTLY_ASKED_QUESTIONS</code></li>
+<li>default: false</li>
+</ul>
+<p>When <code>true</code> will enable the route under <code>/help/faq</code> in which the content of <code>lib/help-faq/faq.md</code> is going to be shown</p>
+<h4 id="-termsofservice-"><a class="heading-anchor" href="#-termsofservice-"><span></span></a><strong>termsOfService</strong></h4>
+<ul>
+<li>env: <code>TERMS_OF_SERVICE</code></li>
+<li>default: false</li>
+</ul>
+<p>When <code>true</code> will enable the route under <code>/help/terms-of-service</code> in which the content of <code>lib/help-tos/tos.md</code> is going to be shown</p>
+<h4 id="-privacypolicy-"><a class="heading-anchor" href="#-privacypolicy-"><span></span></a><strong>privacyPolicy</strong></h4>
+<ul>
+<li>env: <code>PRIVACY_POLICY</code></li>
+<li>default: false</li>
+</ul>
+<p>When <code>true</code> will enable the route under <code>/help/privacy-policy</code> in which the content of <code>lib/help-pp/pp.md</code> is going to be shown</p>
+<h4 id="-glossary-"><a class="heading-anchor" href="#-glossary-"><span></span></a><strong>glossary</strong></h4>
+<ul>
+<li>env: <code>GLOSSARY</code></li>
+<li>default: false</li>
+</ul>
+<p>When <code>true</code> will enable the route under <code>/help/privacy-policy</code> in which the content of <code>lib/help-pp/pp.md</code> is going to be shown</p>
+<h3 id="in-app-featuresn"><a class="heading-anchor" href="#in-app-featuresn"><span></span></a>In-App featuresn</h3>
+<h4 id="-facebooksignin-"><a class="heading-anchor" href="#-facebooksignin-"><span></span></a><strong>facebookSignin</strong></h4>
+<ul>
+<li>env: <code>FACEBOOK_SIGNIN</code></li>
+<li>default: false</li>
+</ul>
+<p>When <code>true</code> will enable signin/signup using Facbook instead of the default email and password.</p>
+<h4 id="-learnmoreurl-"><a class="heading-anchor" href="#-learnmoreurl-"><span></span></a><strong>learnMoreUrl</strong></h4>
+<ul>
+<li>env: <code>LEARN_MORE_URL</code></li>
+<li>default: &#x201C;&#x201D;</li>
+</ul>
+<p>Link to any URL explaining more about the particular DemocracyOS instance or any other thing that wants to be clarified as the institution using it or any kind of impact on the real world the decision arrived on the software will have.</p>
+<h4 id="-rssenabled-"><a class="heading-anchor" href="#-rssenabled-"><span></span></a><strong>rssEnabled</strong></h4>
+<ul>
+<li>env: <code>RSS_ENABLED</code></li>
+<li>default: true</li>
+</ul>
+<p>When <code>true</code> will enable a route under <code>/rss</code> that can be used as a RSS Feed (XML)</p>
+<h4 id="-commentsperpage-"><a class="heading-anchor" href="#-commentsperpage-"><span></span></a><strong>commentsPerPage</strong></h4>
+<ul>
+<li>env: <code>COMMENTS_PER_PAGE</code></li>
+<li>default: 0</li>
+</ul>
+<p>Number specifying how many comments will be listed before a &#x201C;Show more&#x201D; button is shown. 0 will get all comments from the backend.</p>
+<h4 id="-clientdebug-"><a class="heading-anchor" href="#-clientdebug-"><span></span></a><strong>clientDebug</strong></h4>
+<ul>
+<li>env: <code>CLIENT_DEBUG</code></li>
+<li>default: &#x201C;&#x201D;</li>
+</ul>
+<p>Namespace (string) used by <a href="https://github.com/visionmedia/debug">visionmedia/debug</a> to show debugging messages on the browser</p>
+<h4 id="-clientdebug-"><a class="heading-anchor" href="#-clientdebug-"><span></span></a><strong>clientDebug</strong></h4>
+<ul>
+<li>env: <code>CLIENT_DEBUG</code></li>
+<li>default: &#x201C;&#x201D;</li>
+</ul>
+<p>Namespace (string) used by <a href="https://github.com/visionmedia/debug">visionmedia/debug</a> to show debugging messages on the browser</p>
+<h4 id="-feedslimit-"><a class="heading-anchor" href="#-feedslimit-"><span></span></a><strong>feedsLimit</strong></h4>
+<ul>
+<li>env: <code>FEEDS_LIMIT</code></li>
+<li>default: 10</li>
+</ul>
+<p>Number of feed cards shown on the homepage when <code>multiForum</code> is set to true</p>
+<h4 id="-tweettext-"><a class="heading-anchor" href="#-tweettext-"><span></span></a><strong>tweetText</strong></h4>
+<ul>
+<li>env: <code>TWEET_TEXT</code></li>
+<li>default: &#x201C;&#x201D;</li>
+</ul>
+<p>Text used when sharing a topic on Twitter</p>
+<h4 id="-googleapikey-"><a class="heading-anchor" href="#-googleapikey-"><span></span></a><strong>googleAPIKey</strong></h4>
+<ul>
+<li>env: <code>GOOGLE_API_KEY</code></li>
+<li>default: &#x201C;&#x201D;</li>
+</ul>
+<p>Key (string) used by <a href="https://github.com/Localize/node-google-translate">google-translate</a> use <a href="https://cloud.google.com/translate/v2/getting_started?hl=en">Google Translator</a> in order to use the command in <code>bin/dos-translate</code></p>
+<h3 id="social-sharing"><a class="heading-anchor" href="#social-sharing"><span></span></a>Social sharing</h3>
+<p>This settings will be used when sharing a link on Facebook or Twitter.</p>
+<p>They are used in <code>lib/facebook-card</code> and <code>lib/twitter-card</code> modules to generate the proper HTML.</p>
+<h4 id="-sitename-"><a class="heading-anchor" href="#-sitename-"><span></span></a><strong>siteName</strong></h4>
+<ul>
+<li>env: <code>SOCIALSHARE_SITE_NAME</code></li>
+<li>default: &#x201C;DemocracyOS&#x201D;</li>
+</ul>
+<h4 id="-sitedescription-"><a class="heading-anchor" href="#-sitedescription-"><span></span></a><strong>siteDescription</strong></h4>
+<ul>
+<li>env: <code>SOCIALSHARE_SITE_DESCRIPTION</code></li>
+<li>default: &#x201C;DemocracyOS voting system&#x201D;</li>
+</ul>
+<h4 id="-image-"><a class="heading-anchor" href="#-image-"><span></span></a><strong>image</strong></h4>
+<ul>
+<li>env: <code>SOCIALSHARE_IMAGE</code></li>
+<li>default: &#x201C;<a href="https://2.gravatar.com/avatar/a8b9176bd0d042db078bf38500727671?d=https%3A%2F%2Fidenticons.github.com%2F14bae9f2564556f8eb23cc263a779f59.png&amp;s=400">https://2.gravatar.com/avatar/a8b9176bd0d042db078bf38500727671?d=https%3A%2F%2Fidenticons.github.com%2F14bae9f2564556f8eb23cc263a779f59.png&amp;s=400</a>&#x201C;</li>
+</ul>
+<h4 id="-domain-"><a class="heading-anchor" href="#-domain-"><span></span></a><strong>domain</strong></h4>
+<ul>
+<li>env: <code>SOCIALSHARE_DOMAIN</code></li>
+<li>default: &#x201C;democracyos.org&#x201D;</li>
+</ul>
+<h4 id="-twitter-username-"><a class="heading-anchor" href="#-twitter-username-"><span></span></a><strong>twitter.username</strong></h4>
+<ul>
+<li>env: <code>SOCIALSHARE_TWITTER_USERNAME</code></li>
+<li>default: &#x201C;@democracyos&#x201D;</li>
+</ul>
 </div></main><script src="/assets/js/index.js"></script></body></html>
