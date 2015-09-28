@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "node --harmony index.js",
-    "serve": "npm run build -- --watch",
+    "serve": "npm run build -- --watch --pretty",
+    "clean": "rm -rf build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run clean && npm run build && gh-pages -d build"
   },
   "repository": {
     "type": "git",
