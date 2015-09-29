@@ -71,6 +71,10 @@ var build = metalsmith(__dirname)
   .use(css)
   .use(img)
   .use(views)
+  .use(assets({
+    source: './assets/statics',
+    directory: '.'
+  }))
 
 if (options.watch) build
   .destination('.tmp')
