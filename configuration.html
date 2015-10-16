@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Configuration | DemocracyOS Documentation</title><link rel="stylesheet" type="text/css" href="/assets/css/index-84ec9c7dd13192791ab04c843c9188d5.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to sign up?</a></p><p class="item child"><a href="/tutorials/forgot-password.html">How to recover your password?</a></p><p class="item child"><a href="/tutorials/create-a-democracy.html">How to create a Democracy?</a></p><p class="item child"><a href="/tutorials/create-a-tag.html">How to create a Tag?</a></p><p class="item child"><a href="/tutorials/create-a-topic.html">How to create a Topic?</a></p></div></nav><main><div class="md"><h1 id="configuration"><a class="heading-anchor" href="#configuration"><span></span></a>Configuration</h1>
-<p>In order to run DemocracyOS, some config settings are needed. These settings can be defined either as a JSON file following the <code>config/defaults.json</code>, or through environment variables.</p>
-<h2 id="overriding-defaults"><a class="heading-anchor" href="#overriding-defaults"><span></span></a>Overriding Defaults</h2>
-<p>Default config options will be loaded from <code>/config/defaults.json</code>. Also it will be used as reference for the <code>Type</code> the values should have.</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Configuration | DemocracyOS Documentation</title><link rel="shortcut icon" type="image/x-icon" href="/undefined"><link rel="apple-touch-icon" href="/undefined"><link rel="stylesheet" type="text/css" href="/assets/css/index-84ec9c7dd13192791ab04c843c9188d5.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to sign up?</a></p><p class="item child"><a href="/tutorials/forgot-password.html">How to recover your password?</a></p><p class="item child"><a href="/tutorials/create-a-democracy.html">How to create a Democracy?</a></p><p class="item child"><a href="/tutorials/create-a-tag.html">How to create a Tag?</a></p><p class="item child"><a href="/tutorials/create-a-topic.html">How to create a Topic?</a></p></div></nav><main><div class="md"><h1 id="configuration"><a class="heading-anchor" href="#configuration"><span></span></a>Configuration</h1>
+<p>In order to run DemocracyOS, some config settings are needed. Default values are listed on <code>config/defaults.json</code>.</p>
+<blockquote>
+<p><em>WARNING: Never change values at <code>config/defaults.json</code>, to edit any value use the methods listed below.</em></p>
+</blockquote>
+<h2 id="configuring"><a class="heading-anchor" href="#configuring"><span></span></a>Configuring</h2>
 <h3 id="configuration-files"><a class="heading-anchor" href="#configuration-files"><span></span></a>Configuration Files</h3>
-<p>Environment specific options can be added using <code>/config/{NODE_ENV}.json</code>. E.g.: If your <code>NODE_ENV</code> is <code>development</code> and a file at <code>/config/development.json</code> exists, the options there will override the ones at <code>/config/defaults.json</code>.</p>
+<p>Environment specific options can be added using <code>config/{NODE_ENV}.json</code>. E.g.: If your <code>NODE_ENV</code> is <code>development</code> you can use <code>config/development.json</code>, the options there will override the ones at <code>config/defaults.json</code>.</p>
 <p>You can generate configuration files using the command:</p>
-<pre><code>node ./bin/dos-install --config
-</code></pre><p>Or, for other environment than <code>development</code>:</p>
-<pre><code>NODE_ENV=production node ./bin/dos-install --config
+<pre><code>NODE_ENV=development node ./bin/dos-install --config
 </code></pre><h3 id="environment-variables"><a class="heading-anchor" href="#environment-variables"><span></span></a>Environment Variables</h3>
 <p>Environment Variables also can be used to override options (recommended for <code>production</code>). <a href="https://help.ubuntu.com/community/EnvironmentVariables">Here&#x2019;s</a> explained how to manage environment variables on Linux/Mac.</p>
 <ul>
@@ -25,7 +25,9 @@
 </ul>
 </li>
 </ul>
-<p><em>* For more info, the values are casted using <a href="https://github.com/DemocracyOS/app/blob/development/lib/config/cast-string.js"><code>lib/config/cast-string.js</code></a>.</em></p>
+<blockquote>
+<p><em>For more info, the values are casted using <a href="https://github.com/DemocracyOS/app/blob/development/lib/config/cast-string.js"><code>lib/config/cast-string.js</code></a>.</em></p>
+</blockquote>
 <h2 id="configuration-values"><a class="heading-anchor" href="#configuration-values"><span></span></a>Configuration Values</h2>
 <h4 id="-locale-"><a class="heading-anchor" href="#-locale-"><span></span></a><strong>locale</strong></h4>
 <ul>

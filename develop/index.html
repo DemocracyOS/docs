@@ -1,3 +1,173 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Develop | DemocracyOS Documentation</title><link rel="stylesheet" type="text/css" href="/assets/css/index-84ec9c7dd13192791ab04c843c9188d5.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to sign up?</a></p><p class="item child"><a href="/tutorials/forgot-password.html">How to recover your password?</a></p><p class="item child"><a href="/tutorials/create-a-democracy.html">How to create a Democracy?</a></p><p class="item child"><a href="/tutorials/create-a-tag.html">How to create a Tag?</a></p><p class="item child"><a href="/tutorials/create-a-topic.html">How to create a Topic?</a></p></div></nav><main><div class="md"><h1 id="customizing-democracyos"><a class="heading-anchor" href="#customizing-democracyos"><span></span></a>Customizing DemocracyOS</h1>
-<p>Here you&#x2019;ll find descriptions for open development efforts as well as some useful how-tos. Feel free to edit/collaborate with whatever you think helps.</p>
-</div></main><script src="/assets/js/index.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Develop | DemocracyOS Documentation</title><link rel="shortcut icon" type="image/x-icon" href="/undefined"><link rel="apple-touch-icon" href="/undefined"><link rel="stylesheet" type="text/css" href="/assets/css/index-84ec9c7dd13192791ab04c843c9188d5.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to sign up?</a></p><p class="item child"><a href="/tutorials/forgot-password.html">How to recover your password?</a></p><p class="item child"><a href="/tutorials/create-a-democracy.html">How to create a Democracy?</a></p><p class="item child"><a href="/tutorials/create-a-tag.html">How to create a Tag?</a></p><p class="item child"><a href="/tutorials/create-a-topic.html">How to create a Topic?</a></p></div></nav><main><div class="md"><h1 id="democracyos-development-guide"><a class="heading-anchor" href="#democracyos-development-guide"><span></span></a>DemocracyOS development guide</h1>
+<p>We&#x2019;ll be using <code>1.0.0</code> branch of DemocracyOS.</p>
+<h1 id="stack"><a class="heading-anchor" href="#stack"><span></span></a>Stack</h1>
+<h4 id="node-js-and-npm"><a class="heading-anchor" href="#node-js-and-npm"><span></span></a>Node.js and NPM</h4>
+<p>We support the <a href="https://nodejs.org/en/blog/release/v4.2.1/">latest version</a> of <a href="https://nodejs.org/en">Node.js</a> so you must have it installed.</p>
+<p>There are many options out there to get it installed:</p>
+<ul>
+<li><p><a href="https://nodejs.org/en/download/">Official site</a>: both Node.js and NPM come bundled with this installation.</p>
+</li>
+<li><p><a href="https://github.com/creationix/nvm">NVM</a>: Node Version Manager - Simple bash script to manage multiple active node.js versions</p>
+</li>
+<li><p><a href="https://github.com/tj/n">tj/n</a>: another -yet simpler- node version manager</p>
+</li>
+</ul>
+<h4 id="mongodb"><a class="heading-anchor" href="#mongodb"><span></span></a>MongoDB</h4>
+<p>We also support the <a href="http://blog.mongodb.org/post/130823293808/mongodb-319-is-released">latest version</a> of <a href="https://www.mongodb.org/">MongoDB</a>.</p>
+<p>So <a href="https://www.mongodb.org/downloads">download</a> the version for your system and follow the installation instructions to get it running.</p>
+<pre><code>Note: we are planning on using Docker for both development and production so start developing on a new machine is easy as pie and we can run the app with the same environment that in production.
+</code></pre><h4 id="browserify"><a class="heading-anchor" href="#browserify"><span></span></a>Browserify</h4>
+<p>We use <a href="http://browserify.org">Browserify</a> to bundle all our client side code, but we use it as a dependency so you don&#x2019;t need to install anything.</p>
+<h4 id="operating-system"><a class="heading-anchor" href="#operating-system"><span></span></a>Operating System</h4>
+<p>We currently don&#x2019;t support Windows, so if you&#x2019;re running it please install VirtualBox with a Linux distribution. We prefer Ubuntu as we know DemocracyOS runs on it.</p>
+<h1 id="configuration"><a class="heading-anchor" href="#configuration"><span></span></a>Configuration</h1>
+<p>All the configuration variables are on the <code>/config/defaults.json</code> file. If you want to override any of them, you should create a new file called <code>development.json</code> on the same directory and re-write the name and the value you want.</p>
+<p>Also, to pass configuration variables to the client we use the <code>client</code> key, which accepts an array of other configuration variable names.</p>
+<p>So if you want to add a new variable called <code>example</code> and pass it to the client, the steps are:</p>
+<ol>
+<li>Add the key-value pair to the <code>defaults.json</code> file, the key should be <code>example</code> and the value whatever you want. It must have a default value, even if it is an empty string.</li>
+<li>If you want to pass that variable to the client, then add <code>&apos;example&apos;</code> to the client array in that same file.</li>
+<li>If you want to test with a different value for the <code>example</code> variable, create a <code>development.json</code> file in the same directory and override the default value.</li>
+</ol>
+<p>Configuration variable names must be <code>camelCased</code> as in production we match Environment Variables with Configuration Variables in this way:</p>
+<p>In defaults.json:</p>
+<pre><code>{
+  ...
+  myVariable: &apos;default&apos;,
+  myOtherVariable: {
+    someProperty: 10
+  }
+  ...
+
+}
+</code></pre><p>In production, those environment variables must be:</p>
+<pre><code>MY_VARIABLE=&quot;not default&quot;
+MY_OTHER_VARIABLE_SOME_PROPERTY=20
+</code></pre><p>As you can see, we match camelCase and nested objects with underscores, and we infer the type using the <code>defaults.json</code> file (<code>myVariable</code> is a <code>string</code> and <code>someProperty</code> is a number in this case).</p>
+<h1 id="running-the-app"><a class="heading-anchor" href="#running-the-app"><span></span></a>Running the app</h1>
+<p>DemocracyOS can be run in many ways, but we prefer just using <code>make</code> on the project root folder.</p>
+<p>Another way can be running <code>gulp bws</code> for development, that will wait for changes on the project files to rebuild every time. For that, we must have <code>gulp</code> installed:</p>
+<pre><code>npm install -g gulp
+</code></pre><h1 id="models"><a class="heading-anchor" href="#models"><span></span></a>Models</h1>
+<p>All our data is stored in MongoDB and to connect with it we use <a href="http://mongoosejs.com/">mongoose</a>, an elegant mongodb object modeling for node.js.</p>
+<p>Models are store on <code>lib/models</code> directory. If you want to add a new model, then do it in a new file under that directory following a similar structure as the models we have.</p>
+<p>After that <code>require</code> it in <code>lib/models/index.js</code>.</p>
+<h1 id="database-api"><a class="heading-anchor" href="#database-api"><span></span></a>Database-API</h1>
+<p>For creating, reading, updating and destroying models we have a data layer which interacts with the models. It&#x2019;s called <code>db-api</code> and it&#x2019;s located under <code>lib/db-api</code>.</p>
+<p>After creating a new model, you should include a new file under the <code>lib/db-api</code> directory with its name and <code>export</code>ing methods for:</p>
+<ul>
+<li>create</li>
+<li>search</li>
+<li>all</li>
+<li>findOne</li>
+<li>destroy</li>
+<li>update</li>
+<li>custom operation</li>
+</ul>
+<p>You can take a look at the current <code>db-api</code>s we have under that directory to see some examples.</p>
+<h1 id="web-api"><a class="heading-anchor" href="#web-api"><span></span></a>Web API</h1>
+<p>We expose those calls from the database api via a restful api. Each <code>model</code> have a different file that follows the convention <code>lib/${modelName}-api/index.js</code>, for example: <code>lib/topic-api/index.js</code>.</p>
+<p>These modules are added to the app on <code>lib/boot/index.js</code> and you should add them like:</p>
+<pre><code>app.use(&apos;/api&apos;, require(&apos;lib/${modelName}-api&apos;));
+</code></pre><p>So it can be accessed on the client on the URL: <code>/api/modelName</code>.</p>
+<h1 id="routing"><a class="heading-anchor" href="#routing"><span></span></a>Routing</h1>
+<h3 id="server-side"><a class="heading-anchor" href="#server-side"><span></span></a>Server Side</h3>
+<p>If you want to add a new route to DemocracyOS, first thing to do is to create a new module under <code>lib</code> for it and expose an <code>app</code> (an <code>express</code> instance) that requires <code>lib/layout</code>. For example:</p>
+<p>In <code>lib/mypage/index.js</code></p>
+<pre><code>/**
+ * Module dependencies.
+ */
+
+var express = require(&apos;express&apos;);
+var app = module.exports = express();
+
+app.get(&apos;/mypage&apos;, require(&apos;lib/layout&apos;));
+</code></pre><p>And at the bottom of <code>lib/boot/index.js</code></p>
+<pre><code>app.use(require(&apos;lib/mypage&apos;));
+</code></pre><h3 id="client-side"><a class="heading-anchor" href="#client-side"><span></span></a>Client Side</h3>
+<p>For client side routing, we use <a href="https://github.com/visionmedia/page.js">page.js</a>, a micro client-side router inspired by the Express router.</p>
+<p>You should create a new file on <code>lib/mypage/mypage.js</code> and include the following lines:</p>
+<pre><code>import page from &apos;page&apos;;
+
+page(&apos;/mypage&apos;, (ctx, next) =&gt; {
+  // your page logic goes here
+});
+</code></pre><p>If you are creating a page for displaying content (and not topics) you should first empty and then render everything inside the <code>#content</code> element. You can do that simply with <a href="https://github.com/component/dom">component-dom</a>:</p>
+<pre><code>import o from &apos;component-dom&apos;;
+import page from &apos;page&apos;;
+import MyPageView from &apos;./view&apos;;
+
+page(&apos;/mypage&apos;, (ctx, next) =&gt; {
+  let myPage = new MyPageView();
+
+  let el = o(&apos;#content&apos;);
+  myPage.appendTo(el[0]);
+});
+</code></pre><p>Which leads us to&#x2026; views.</p>
+<h1 id="views"><a class="heading-anchor" href="#views"><span></span></a>Views</h1>
+<p>To create new views (the HTML that you will show to the end user) start by creating a new file inside <code>lib/mypage</code> called <code>view.js</code>. This is if you also have a route called that way, but if you don&#x2019;t you can just create it under <code>lib/my-view/view.js</code>.</p>
+<p>We have our own <code>View</code> library under <code>lib/view/view.js</code> which provides you with methods for:</p>
+<ul>
+<li><code>constructor</code>: pass a template and locals for that template</li>
+<li><code>switchOn</code>: function called when the template is rendered in the DOM</li>
+<li><code>switchOff</code>: function called when the template is removed from the DOM</li>
+<li><code>appendTo</code>: appends the created element inside the passed element</li>
+<li><code>bind</code>: used to bind event handlers</li>
+<li>others that you can see on <code>lib/view/view.js</code></li>
+</ul>
+<p>You shouldn&#x2019;t be touching this file but instead you should extend your own views from it:</p>
+<pre><code>import View from &apos;../view/view.js&apos;;
+import template from &apos;./template.jade&apos;;
+
+export default class MyView extends View {
+
+  constructor (topic) {
+    super(template, { topic });
+  }
+}
+</code></pre><h1 id="templates"><a class="heading-anchor" href="#templates"><span></span></a>Templates</h1>
+<p>On the previous example, we used a template. This file is written in <a href="http://jade-lang.com/">jade</a> format and it should have one and only one container element. If you write something like:</p>
+<pre><code>.topic-container
+  .topic-body
+    // ...
+.comments
+  .comment-form
+    // ...
+</code></pre><p>You have two root containers (<code>topic-container</code> and <code>.comments</code>) and you will run into problems with that. Templates can be passed in data on the <code>locals</code> objects: on the view when you call <code>super(template, locals)</code>.</p>
+<h1 id="stores"><a class="heading-anchor" href="#stores"><span></span></a>Stores</h1>
+<p>Stores are the responsible for communicating with the server side API to get the needed data. A store must have a <code>name</code> function defined returning the name of the model that&#x2019;s related to, because it is used to build up the API URL.</p>
+<p>For making requests to the server we use our own mode on <code>lib/request/request.js</code> which uses <a href="https://github.com/visionmedia/superagent">superagent</a>.</p>
+<p>As with the Views, if you create a new store you should extend <code>lib/store/store.js</code>.</p>
+<pre><code>import Store from &apos;../store/store&apos;;
+
+class MyModelStore extends Store {
+  name() {
+    return &apos;myModel&apos;; // calls will be made to &apos;/api/myModel&apos;
+  }
+}
+</code></pre><p>That store comes already bundled with methods like:</p>
+<ul>
+<li>findOne</li>
+<li>findAll</li>
+<li>destroy</li>
+</ul>
+<p>Store uses <a href="http://babeljs.io/docs/learn-es2015/">Promises</a> to make async calls, caching the promises on a private variable called <code>_fetches</code>.</p>
+<p>To see a full example of a customized store, you can see <code>lib/topic-store/topic-store.js</code>.</p>
+<h1 id="middlewares"><a class="heading-anchor" href="#middlewares"><span></span></a>Middlewares</h1>
+<p>You will probably need the data on your pages, for that you can create a custom <a href="https://github.com/visionmedia/page.js#routing">middleware</a> function.</p>
+<p>To keep things organized we have created some modules like <code>lib/topic-middlewares/topic-middlewares.js</code>.</p>
+<p>Under the routes that need data, you should include these middlewares and probably you will be using a store for making those calls.</p>
+<p>When the data is ready, then you should call <code>next</code> on that middleware, for example:</p>
+<pre><code>export function findMyModel(ctx, next) {
+  myModelStore
+    .findOne(ctx.params.id)
+    .then(model =&gt; {
+      ctx.model = model;
+      next();
+    })
+    .catch(err =&gt; {
+      if (404 !== err.status) throw err;
+      log(`Unable to load model for ${ctx.params.id}`);
+    });
+}
+</code></pre></div></main><script src="/assets/js/index.js"></script></body></html>
