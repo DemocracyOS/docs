@@ -11,7 +11,7 @@ Since this project uses a [git submodule](https://git-scm.com/book/en/v2/Git-Too
 git clone git@github.com:DemocracyOS/docs.git --recursive
 ```
 
-The run `npm install` to fetch all npm dependencies.
+Then run `npm install` to fetch all npm dependencies.
 
 ## Commands
 
