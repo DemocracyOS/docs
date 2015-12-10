@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Notifications | DemocracyOS Documentation</title><link rel="shortcut icon" type="image/x-icon" href="/undefined"><link rel="apple-touch-icon" href="/undefined"><link rel="stylesheet" type="text/css" href="/assets/css/index-84ec9c7dd13192791ab04c843c9188d5.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item child"><a href="/develop/notifications.html">Notifications</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to sign up?</a></p><p class="item child"><a href="/tutorials/forgot-password.html">How to recover your password?</a></p><p class="item child"><a href="/tutorials/create-a-democracy.html">How to create a Democracy?</a></p><p class="item child"><a href="/tutorials/create-a-tag.html">How to create a Tag?</a></p><p class="item child"><a href="/tutorials/create-a-topic.html">How to create a Topic?</a></p></div></nav><main><div class="md"><h1 id="introduction"><a class="heading-anchor" href="#introduction"><span></span></a>Introduction</h1>
+<p>The Notifications module aims to register all the application events a user might be interested. At a database level, those events are stored in the <code>notifications</code> collection. On the frontend, they are displayed in the <code>/notifications</code> page, accessible through the bell icon near the user badge.</p>
+<p>Until now, we are registering three kind of events:</p>
+<ul>
+<li>When a user replies to somebody else&#x2019;s comment</li>
+<li>When a user upvotes somebody else&#x2019;s comment</li>
+<li>When a user downvotes somebody else&#x2019;s comment</li>
+</ul>
+<h1 id="the-model"><a class="heading-anchor" href="#the-model"><span></span></a>The model</h1>
+<p>In <code>lib/models/notification.js</code> is declared the <code>NotificationSchema</code> that defines the <code>Notification</code> Mongoose model. It has the following properties:</p>
+<ul>
+<li><code>user</code>: <code>ObjectId</code> that refers to the <code>User</code> whose notification is targeted. In the case of a reply, its the user who wrote the replied comment.</li>
+<li><code>type</code>: <code>enum</code> that represents what kind of notification is.</li>
+<li><code>comment</code>: <code>ObjectId</code> that points to a <code>Comment</code>.</li>
+<li><code>relatedUser</code>: <code>ObjectId</code> that refers to the <code>User</code> that triggered the notification. In the case of a reply, its the replier.</li>
+<li><code>topic</code>: <code>ObjectId</code> that refers to a related <code>Topic</code>.</li>
+</ul>
+<p>There is a virtual method, <code>url</code>, that returns the URL of the target object (in this case, the topic that holds the replied/upvoted/downvoted comment).</p>
+<h1 id="api-endpoints"><a class="heading-anchor" href="#api-endpoints"><span></span></a>API endpoints</h1>
+<p>Notifications are created and pushed to the database via an internal API. They cannot be created through the public API, but they can be queried.
+The public API is located in <code>lib/notification-api/index.js</code> and has only one endpoint: <code>GET /api/notification/all</code>, that delivers all the notifications for the logged in user (the app forbids to retrieve notifications of other user).</p>
+<h1 id="pushing-a-new-notification"><a class="heading-anchor" href="#pushing-a-new-notification"><span></span></a>Pushing a new notification</h1>
+<p>Internally, the notifications are pushed to the <code>notifications</code> collection through the <code>lib/notifications/index.js</code> module, by calling the <code>send</code> function. That function overrides the <code>NotifierClient#send()</code> function, that internally calls two asynchronous functions: one pushes the notification document and the other one calls <code>notifier</code> to send a notification e-mail.</p>
+<h1 id="notification-page"><a class="heading-anchor" href="#notification-page"><span></span></a>Notification page</h1>
+<p>The notifications page is accessible by browsing to <code>/notifications</code> or clicking in the bell icon next to the user badge. The page lifecycle is handled in the <code>lib/notifications-page</code> module.</p>
+<h1 id="what-about-notifier-"><a class="heading-anchor" href="#what-about-notifier-"><span></span></a>What about <code>notifier</code>?</h1>
+<p>The notifications module does not replace the <code>notifier</code> module. They work together and its responsibilities are different: <code>notifications</code> responsibility is to push a notification document into the <code>notifications</code> collection on the database. <code>notifier</code>&#x2018;s responsibility is to send an e-mail using the configured transport.</p>
+<h1 id="roadmap"><a class="heading-anchor" href="#roadmap"><span></span></a>Roadmap</h1>
+<p>We are heading to change <code>notifier</code> behavior by making it poll the <code>notification</code> collection in order to find unread notifications and build and send a digest e-mail notifying all together the pending events of a user.</p>
+<p>Also, we are continuously improving the <code>notifications</code> module to make it more usable.</p>
+</div></main><script src="/assets/js/index.js"></script></body></html>
