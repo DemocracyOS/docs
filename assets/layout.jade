@@ -14,3 +14,8 @@ html(lang='en')
       .md
         != contents
     script(src='/assets/js/index.js')
+    script.
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'DemocracyOS/democracyos'
+      };
+    script(src='https://sidecar.gitter.im/dist/sidecar.v1.js', async='', defer='')
