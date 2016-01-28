@@ -29,12 +29,13 @@
 <ul>
 <li><a href="http://help.github.com/articles/fork-a-repo">Fork</a> or download this repository.</li>
 <li><code>cd</code> to the project&#x2019;s location</li>
-<li>Create the default configuration file running <code>node ./bin/dos-install --config</code>, or head to the <a href="configuration.html">Configuration</a> guide for further customizations.</li>
 <li>Make sure MongoDB is running and reachable as configured in <code>config/development.json</code>. (Default values should work)</li>
-<li>Set the environment variable <code>NODE_PATH</code> with value: <code>.</code>.</li>
-<li>From the root path of the project, run <code>make</code> to download all the necessary dependencies and run the local server.</li>
-<li>For users behind corporate proxy, its recommended to clone the project using <code>https:</code> instead of <code>git:</code> url.</li>
+<li>Run <code>make</code></li>
+<li>Boom! DemocracyOS should be running on port 3000.</li>
 </ul>
+<blockquote>
+<p>Please refer to the <a href="configuration.html">Configuration</a> section to customize settings</p>
+</blockquote>
 <h2 id="running"><a class="heading-anchor" href="#running"><span></span></a>Running</h2>
 <p>Once DemocracyOS components and dependencies are installed, you can start the application like this:</p>
 <pre><code class="lang-bash">make run
