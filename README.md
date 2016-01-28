@@ -13,6 +13,16 @@ git clone git@github.com:DemocracyOS/docs.git --recursive
 
 Then run `npm install` to fetch all npm dependencies.
 
+## Getting new docs
+
+When [DemocracyOS](https://github.com/DemocracyOS/app) documentation is updated, to pull those changes you have to: 
+
+- On this directory, `cd` into `app` directory
+- Run `git pull origin master`
+- `cd` back to the root directory of this repository
+- Add the changes and commit them to the `master` branch
+- After that, run `npm run deploy` to see those changes in the online site.
+
 ## Commands
 
 `npm run build`: Converts `/app/docs/**/*.md` files to `.html` using `/assets` for templating and saves it to `/build` directory.
