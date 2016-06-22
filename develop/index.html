@@ -1,25 +1,31 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Develop | DemocracyOS Documentation</title><link rel="shortcut icon" type="image/x-icon" href="/undefined"><link rel="apple-touch-icon" href="/undefined"><link rel="stylesheet" type="text/css" href="/assets/css/index-84ec9c7dd13192791ab04c843c9188d5.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item child"><a href="/develop/notifications.html">Notifications</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to sign up?</a></p><p class="item child"><a href="/tutorials/forgot-password.html">How to recover your password?</a></p><p class="item child"><a href="/tutorials/create-a-democracy.html">How to create a Democracy?</a></p><p class="item child"><a href="/tutorials/create-a-tag.html">How to create a Tag?</a></p><p class="item child"><a href="/tutorials/create-a-topic.html">How to create a Topic?</a></p></div></nav><main><div class="md"><h1 id="democracyos-development-guide"><a class="heading-anchor" href="#democracyos-development-guide"><span></span></a>DemocracyOS development guide</h1>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"><title>Develop | DemocracyOS Documentation</title><link rel="shortcut icon" type="image/x-icon" href="/undefined"><link rel="apple-touch-icon" href="/undefined"><link rel="stylesheet" type="text/css" href="/assets/css/index-84ec9c7dd13192791ab04c843c9188d5.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Martel:200,400" rel="stylesheet" type="text/css"></head><body><div data-sidebar-toggle class="sidebar-toggle"><div><span></span></div></div><nav data-sidebar class="sidebar"><img src="/assets/img/logo.svg" class="logo"><div class="navigation"><p class="item"><a href="/">Overview</a></p><p class="item"><a href="/install.html">Install</a></p><p class="item"><a href="/configuration.html">Configuration</a></p><p class="item"><a href="/contributing.html">Contributing</a></p><p class="item"><a href="/coding-styles.html">Coding Styles</a></p><p class="item dir"><a href="/deploy/">Deploy</a></p><p class="item dir"><a href="/develop/">Develop</a></p><p class="item child"><a href="/develop/permissions.html">Permissions</a></p><p class="item child"><a href="/develop/notifications.html">Notifications</a></p><p class="item dir"><a href="/tutorials/">Tutorials</a></p><p class="item child"><a href="/tutorials/sign-up.html">How to sign up?</a></p><p class="item child"><a href="/tutorials/forgot-password.html">How to recover your password?</a></p><p class="item child"><a href="/tutorials/create-a-democracy.html">How to create a Democracy?</a></p><p class="item child"><a href="/tutorials/create-a-tag.html">How to create a Tag?</a></p><p class="item child"><a href="/tutorials/create-a-topic.html">How to create a Topic?</a></p></div></nav><main><div class="md"><h1 id="democracyos-development-guide"><a class="heading-anchor" href="#democracyos-development-guide"><span></span></a>DemocracyOS development guide</h1>
 <p>We&#x2019;ll be using version <code>^1.0.0</code> of DemocracyOS.</p>
+<p>There are several ways for developing DemocracyOS. The most straightforward way is by leveraging <a href="https://www.docker.com"><code>Docker</code></a>, since this will save you the need for configuring your environment for running and building natively. For more on running our dockerised development environment jump to the <a href="http://docs.democracyos.org/develop/#running-the-app">Running the app</a> section.</p>
+<p>Alternatively, configure your local environment as follows:</p>
 <h1 id="stack"><a class="heading-anchor" href="#stack"><span></span></a>Stack</h1>
-<h4 id="node-js-and-npm"><a class="heading-anchor" href="#node-js-and-npm"><span></span></a>Node.js and NPM</h4>
-<p>You need <a href="https://nodejs.org/en/blog/release/v4.0.0/">Node.js v4.0.0</a> or greater to run DemocracyOS.</p>
+<h4 id="node-js-and-npm"><a class="heading-anchor" href="#node-js-and-npm"><span></span></a>Node.js and npm</h4>
+<p>You need <a href="https://nodejs.org/en/blog/release/v4.0.0/">Node.js v4.0.0</a> or greater to run DemocracyOS, but we always try to keep up with their latest release, so feel free to try newer <code>node</code> versions.</p>
 <p>There are many options out there to get it installed:</p>
 <ul>
-<li><p><a href="https://nodejs.org/en/download/">Official site</a>: both Node.js and NPM come bundled with this installation.</p>
+<li><p><a href="https://nodejs.org/en/download/">Official site</a>: both Node.js and npm come bundled with this installation.</p>
 </li>
-<li><p><a href="https://github.com/creationix/nvm">NVM</a>: Node Version Manager - Simple bash script to manage multiple active node.js versions</p>
+<li><p><a href="https://github.com/creationix/nvm">nvm</a>: Node Version Manager - Simple bash script to manage multiple active node.js versions</p>
 </li>
 <li><p><a href="https://github.com/tj/n">tj/n</a>: another -yet simpler- node version manager</p>
 </li>
 </ul>
 <h4 id="mongodb"><a class="heading-anchor" href="#mongodb"><span></span></a>MongoDB</h4>
-<p>We also support the <a href="http://blog.mongodb.org/post/130823293808/mongodb-319-is-released">latest version</a> of <a href="https://www.mongodb.org/">MongoDB</a>.</p>
-<p>So <a href="https://www.mongodb.org/downloads">download</a> the version for your system and follow the installation instructions to get it running.</p>
-<pre><code>Note: we are planning on using Docker for both development and production so start developing on a new machine is easy as pie and we can run the app with the same environment that in production.
+<p>We support the <a href="https://www.mongodb.com/support-policy">latest supported version</a> of <a href="https://www.mongodb.org/"><code>MongoDB</code></a>.</p>
+<p>So <a href="https://www.mongodb.com/download-center">download</a> the version for your system and follow the installation instructions to get it running.</p>
+<p>Alternatively, you may want to run <code>MongoDB</code> in a <code>Docker</code> container. If so, just do:</p>
+<p><code>docker run -p 27017:27017 --name mongodb mongo</code></p>
+<p>After your container is up and running, <a href="http://docs.democracyos.org/develop/#configuration">update your configuration</a> so your can access the container properly.</p>
+<pre><code>Note: this manual usage of a MongoDB container if using docker-compose.
 </code></pre><h4 id="browserify"><a class="heading-anchor" href="#browserify"><span></span></a>Browserify</h4>
 <p>We use <a href="http://browserify.org">Browserify</a> to bundle all our client side code, but we use it as a dependency so you don&#x2019;t need to install anything.</p>
 <h4 id="operating-system"><a class="heading-anchor" href="#operating-system"><span></span></a>Operating System</h4>
-<p>We currently don&#x2019;t support Windows, so if you&#x2019;re running it please install VirtualBox with a Linux distribution. We prefer Ubuntu as we know DemocracyOS runs on it.</p>
+<p>DemocracyOS runs properly on <code>OS/X</code> and plenty of <code>Linux</code> distros, especially <code>Debian</code>-based ones.
+We currently don&#x2019;t support <code>Windows</code> for running natively, so if you&#x2019;re running <code>Windows</code> please rely on <code>Docker</code> as described in the <a href="http://docs.democracyos.org/develop/#running-the-app">Running the app section</a>, or use another form of virtualisation (e.g.: <code>Vagrant</code>, <code>VirtualBox</code>, etc.).</p>
 <h1 id="configuration"><a class="heading-anchor" href="#configuration"><span></span></a>Configuration</h1>
 <p>All the configuration variables are on the <code>/config/defaults.json</code> file. If you want to override any of them, you should create a new file called <code>development.json</code> on the same directory and re-write the name and the value you want.</p>
 <p>Also, to pass configuration variables to the client we use the <code>client</code> key, which accepts an array of other configuration variable names.</p>
@@ -45,10 +51,21 @@
 MY_OTHER_VARIABLE_SOME_PROPERTY=20
 </code></pre><p>As you can see, we match camelCase and nested objects with underscores, and we infer the type using the <code>defaults.json</code> file (<code>myVariable</code> is a <code>string</code> and <code>someProperty</code> is a number in this case).</p>
 <h1 id="running-the-app"><a class="heading-anchor" href="#running-the-app"><span></span></a>Running the app</h1>
-<p>DemocracyOS can be run in many ways, but we prefer just using <code>make</code> on the project root folder.</p>
-<p>Another way can be running <code>gulp bws</code> for development, that will wait for changes on the project files to rebuild every time. For that, we must have <code>gulp</code> installed:</p>
+<p>DemocracyOS can be run in many ways, but we prefer either of these two approaches:</p>
+<h4 id="native"><a class="heading-anchor" href="#native"><span></span></a>Native</h4>
+<p>Just use <code>make</code> on the project root folder; that will run the app.</p>
+<p>For more intensive development, you might want to use <code>gulp bws</code> for development, that will wait for changes on the project files to rebuild every time. For that, we must have <code>gulp</code> installed:</p>
 <pre><code>npm install -g gulp
-</code></pre><h1 id="models"><a class="heading-anchor" href="#models"><span></span></a>Models</h1>
+</code></pre><h4 id="docker-containers"><a class="heading-anchor" href="#docker-containers"><span></span></a>Docker containers</h4>
+<p>You can run your development environment inside a <a href="https://www.docker.com"><code>Docker</code></a> container pretty easily, and it will save you from installing anything on your development machine besides <code>Docker</code> itself.</p>
+<p>First, you must have the latest version of <a href="https://www.docker.com/products/docker-engine"><code>Docker Engine</code></a> and <a href="https://www.docker.com/products/docker-compose">Docker Compose</a> available in your machine.
+If you&#x2019;re either a <code>Windows</code> or <code>OS/X</code> user, using the <a href="https://www.docker.com/products/overview#/docker_toolbox"><code>Docker Toolbox</code></a> is recommended as you may have to rely on <a href="https://www.docker.com/products/docker-machine"><code>Docker Machine</code></a> unless you get the <a href="https://beta.docker.com/">native <code>docker</code> apps currently on open beta</a>.</p>
+<p>Regardless of how you got <code>Docker</code>, running the app is completely straightforward:</p>
+<p><code>$ make docker</code></p>
+<p>And that&#x2019;s it. If you don&#x2019;t have <code>make</code> available, this also works:</p>
+<p><code>$ docker-compose up app</code></p>
+<p>Every change to the files you make on your local files will get mirrored inside your development container. If you&#x2019;re wondering how it is that this works, see this &#x2728;<a href="http://giphy.com/gifs/VHngktboAlxHW/fullscreen">thorough explanation</a>&#x2728;.</p>
+<h1 id="models"><a class="heading-anchor" href="#models"><span></span></a>Models</h1>
 <p>All our data is stored in MongoDB and to connect with it we use <a href="http://mongoosejs.com/">mongoose</a>, an elegant mongodb object modeling for node.js.</p>
 <p>Models are store on <code>lib/models</code> directory. If you want to add a new model, then do it in a new file under that directory following a similar structure as the models we have.</p>
 <p>After that <code>require</code> it in <code>lib/models/index.js</code>.</p>
