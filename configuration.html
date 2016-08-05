@@ -160,6 +160,18 @@ For example, if the value is 5, all arguments with score less or equal to -5 wil
 <li><code>azure</code>: Redirection to HTTPS compatible with Windows Azure. Do NOT use outside Windows Azure; this can be easily spoofed outside their environment.</li>
 <li><code>no-redirect</code>: The redirection is not handled. Meant to be used on development only.</li>
 </ul>
+<h3 id="let-s-encrypt"><a class="heading-anchor" href="#let-s-encrypt"><span></span></a>Let&#x2019;s Encrypt</h3>
+<p>Values needed to be able to validate a certificate generated using Let&#x2019;s Encrypt&#x2019;s Certbot service. To use it, setup the following configuration options and follow <a href="https://github.com/DemocracyOS/express-certbot-endpoint">this</a> instructions.</p>
+<h4 id="-cerbot-key-"><a class="heading-anchor" href="#-cerbot-key-"><span></span></a><strong>cerbot.key</strong></h4>
+<ul>
+<li>env: <code>CERTBOT_KEY</code></li>
+</ul>
+<p>Certbot key needed when manually generating the certificate, should be something like <code>hvBj5jK2o3B6IpFhdrc8Q1OR6UeIl63_xXxXxXxXxXx</code></p>
+<h4 id="-cerbot-token-"><a class="heading-anchor" href="#-cerbot-token-"><span></span></a><strong>cerbot.token</strong></h4>
+<ul>
+<li>env: <code>CERTBOT_TOKEN</code></li>
+</ul>
+<p>Certbot token needed when manually generating the certificate, should be something like <code>msbwzok5NNPLg2BjLBIGVali8utyXrc95xXxXxXxXxX</code></p>
 <h3 id="embebed-notifier-server"><a class="heading-anchor" href="#embebed-notifier-server"><span></span></a>Embebed Notifier Server</h3>
 <p>By default DemocracyOS uses an embeded <a href="https://github.com/DemocracyOS/notifier">Notifier</a>. This options are used to configure mailer transports (gmail, mailchimp, sendgrid, etc).</p>
 <h4 id="-notifications-mailer-service-"><a class="heading-anchor" href="#-notifications-mailer-service-"><span></span></a><strong>notifications.mailer.service</strong></h4>
