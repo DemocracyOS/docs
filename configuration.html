@@ -16,7 +16,7 @@
 <li>Scoped variables e.g.: <code>notifications.url</code> =&gt; <code>NOTIFICATIONS_URL</code></li>
 </ul>
 </li>
-<li><code>Arrays</code>s should be strings separated by commas.<ul>
+<li><code>Arrays</code> should be strings separated by commas.<ul>
 <li>e.g.: <code>&quot;staff&quot;: [&quot;mail@eg.com&quot;, &quot;a@c.m&quot;]</code> =&gt; <code>STAFF=&quot;mail@eg.com,a@c.m&quot;</code></li>
 </ul>
 </li>
@@ -40,7 +40,7 @@
 <li>env: <code>AVAILABLE_LOCALES</code></li>
 <li>default: <code>[ ... ]</code></li>
 </ul>
-<p>Enabled languages. This are all the languages the user can select on the <code>/settings</code> page.</p>
+<p>Enabled languages. These are all the languages the user can select on the <code>/settings</code> page.</p>
 <h4 id="-protocol-"><a class="heading-anchor" href="#-protocol-"><span></span></a><strong>protocol</strong></h4>
 <ul>
 <li>env: <code>PROTOCOL</code></li>
@@ -87,7 +87,7 @@
 <li>env: <code>ALLOW_EMAIL_ALIASES</code></li>
 <li>default: <code>true</code></li>
 </ul>
-<p>When this is <code>true</code>, the user will be able to register several times with the same email using alias like the <a href="https://support.google.com/mail/answer/12096">ones from Gmail</a>. Uses <a href="https://www.npmjs.com/package/verigy">Verigy</a> module.</p>
+<p>When this is <code>true</code>, the user will be able to register several times with the same email using alias like the <a href="https://support.google.com/mail/answer/22370">ones from Gmail</a>. Uses <a href="https://www.npmjs.com/package/verigy">Verigy</a> module.</p>
 <h4 id="-visibility-"><a class="heading-anchor" href="#-visibility-"><span></span></a><strong>visibility</strong></h4>
 <ul>
 <li>env: <code>VISIBILITY</code></li>
@@ -108,12 +108,18 @@
 </ul>
 <p>If this option is set to <code>true</code>, the application will be in a &#x201C;hub&#x201D; state and any user will be able to create it&#x2019;s own forum.</p>
 <p><em><strong>DISCLAIMER:</strong> This option is in ALPHA state, expect a lot a changes not far away.</em></p>
+<h4 id="-defaultforum-"><a class="heading-anchor" href="#-defaultforum-"><span></span></a><strong>defaultForum</strong></h4>
+<ul>
+<li>env: <code>DEFAULT_FORUM</code></li>
+<li>default: <code>&quot;&quot;</code></li>
+</ul>
+<p>Optional value for setting an existent forum&#x2019;s name of a multiforum database for using it as a singleForum.</p>
 <h4 id="-client-"><a class="heading-anchor" href="#-client-"><span></span></a><strong>client</strong></h4>
 <ul>
 <li>env: <code>CLIENT</code></li>
 <li>default: <code>[ ... ]</code></li>
 </ul>
-<p>Config options to be sended to the client, and usable from <code>/lib/config/config.js</code>. In most cases, this shouldn&#x2019;t be edited.</p>
+<p>Config options to be sended to the client, and usable from <code>/lib/config.js</code>. In most cases, this shouldn&#x2019;t be edited.</p>
 <h4 id="-forcesafeimageurls-"><a class="heading-anchor" href="#-forcesafeimageurls-"><span></span></a><strong>forceSafeImageURLs</strong></h4>
 <ul>
 <li>env: <code>FORCE_SAFE_IMAGE_URLS</code></li>
@@ -189,6 +195,11 @@ For example, if the value is 5, all arguments with score less or equal to -5 wil
 <li>env: <code>NOTIFICATIONS_MAILER_AUTH_PASS</code></li>
 </ul>
 <p>Password for the <a href="https://github.com/DemocracyOS/notifier">notifier</a> transport.</p>
+<h4 id="-notifications-nodemailer-"><a class="heading-anchor" href="#-notifications-nodemailer-"><span></span></a><strong>notifications.nodemailer</strong></h4>
+<ul>
+<li>env: <code>NOTIFICATIONS_NODEMAILER</code></li>
+</ul>
+<p>Optional object that will override any nodemailer options for creating a mailerTransport.</p>
 <h3 id="external-notifier-server"><a class="heading-anchor" href="#external-notifier-server"><span></span></a>External Notifier Server</h3>
 <p>In case you&#x2019;re using an external <a href="https://github.com/DemocracyOS/notifier-server">Notifier Server</a>, these are the options that need to be configured.</p>
 <h4 id="-notifications-url-"><a class="heading-anchor" href="#-notifications-url-"><span></span></a><strong>notifications.url</strong></h4>

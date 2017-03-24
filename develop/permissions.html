@@ -6,12 +6,14 @@
 <li>a forum can be <em>restricted</em>, where everyone can see the topics but some people can comment and vote;</li>
 <li>a forum can be <em>secret</em>, where nobody can see the topics or vote unless they are authorized by the owner or an admin.</li>
 </ul>
-<p>We distinguish three roles on a forum:</p>
+<p>We distinguish five roles on a forum:</p>
 <ul>
 <li>The <em>Owner</em> is unique, and cannot be changed. It&#x2019;s free to change everything regarding this forum.</li>
 <li><em>Administrators</em> can give permissions to other users, edit forum settings, and manage the content (create and edit topics, etc).</li>
 <li><em>Collaborators</em> can add, edit and delete topics on this forum.</li>
+<li><em>Authors</em> can add topics but can&#x2019;t publish them, can only edit own not published topics.</li>
 <li><em>Participants</em> can comment and vote this forum if it&#x2019;s Restricted or Private.</li>
+<li><em>Moderator</em> can delete comments if allowed through config.</li>
 </ul>
 <p>This article is intended to provide you, as a developer, guidelines to understand and extend the permissions approach.</p>
 <h1 id="the-model"><a class="heading-anchor" href="#the-model"><span></span></a>The model</h1>
@@ -23,7 +25,7 @@
 <li><code>visibilities.js</code>: List of allowed values for visibility key on forums.</li>
 </ul>
 <h1 id="middlewares"><a class="heading-anchor" href="#middlewares"><span></span></a>Middlewares</h1>
-<p>Some API operations are permission-aware, so when a user tries to perform any of it, the privileges should be checked. It is done by using Express middlewares that are implemented in <code>lib/forum-middlewares/index.js</code> and <code>lib/forum-api/index.js</code>.</p>
+<p>Some API operations are permission-aware, so when a user tries to perform any of it, the privileges should be checked. It is done by using Express middlewares that are implemented in <code>lib/middlewares/forum-middlewares/index.js</code>.</p>
 </div></main><script src="/assets/js/index.js"></script><script>((window.gitter = {}).chat = {}).options = {
   room: 'DemocracyOS/democracyos'
 };</script><script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script></body></html>

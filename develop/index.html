@@ -65,6 +65,9 @@ If you&#x2019;re either a <code>Windows</code> or <code>OS/X</code> user, using 
 <p>And that&#x2019;s it. If you don&#x2019;t have <code>make</code> available, this also works:</p>
 <p><code>$ docker-compose up app</code></p>
 <p>Every change to the files you make on your local files will get mirrored inside your development container. If you&#x2019;re wondering how it is that this works, see this &#x2728;<a href="http://giphy.com/gifs/VHngktboAlxHW/fullscreen">thorough explanation</a>&#x2728;.</p>
+<h1 id="folders-structure"><a class="heading-anchor" href="#folders-structure"><span></span></a>Folders structure</h1>
+<p>We group the code that belongs to specific parts of the app in three folders (site, admin and settings) that will generate specific front end bundle for each part, the respective folders are <code>/lib/site</code>, <code>/lib/admin</code> and <code>/lib/settings</code>
+The rest of the code that are generic or are not specific of a bundle are located directly in <code>/lib</code></p>
 <h1 id="models"><a class="heading-anchor" href="#models"><span></span></a>Models</h1>
 <p>All our data is stored in MongoDB and to connect with it we use <a href="http://mongoosejs.com/">mongoose</a>, an elegant mongodb object modeling for node.js.</p>
 <p>Models are store on <code>lib/models</code> directory. If you want to add a new model, then do it in a new file under that directory following a similar structure as the models we have.</p>
@@ -83,14 +86,14 @@ If you&#x2019;re either a <code>Windows</code> or <code>OS/X</code> user, using 
 </ul>
 <p>You can take a look at the current <code>db-api</code>s we have under that directory to see some examples.</p>
 <h1 id="web-api"><a class="heading-anchor" href="#web-api"><span></span></a>Web API</h1>
-<p>We expose those calls from the database api via a restful api. Each <code>model</code> have a different file that follows the convention <code>lib/${modelName}-api/index.js</code>, for example: <code>lib/topic-api/index.js</code>.</p>
-<p>These modules are added to the app on <code>lib/boot/index.js</code> and you should add them like:</p>
-<pre><code>app.use(&apos;/api&apos;, require(&apos;lib/${modelName}-api&apos;));
+<p>We expose those calls from the database api via a restful api. Each <code>model</code> have a different file that follows the convention <code>lib/api/${modelName}/index.js</code>, for example: <code>lib/api/topic/index.js</code>.</p>
+<p>These modules are added to the app on <code>lib/api/boot/index.js</code> and you should add them like:</p>
+<pre><code>app.use(&apos;/api&apos;, require(&apos;lib/api/${modelName}&apos;));
 </code></pre><p>So it can be accessed on the client on the URL: <code>/api/modelName</code>.</p>
 <h1 id="routing"><a class="heading-anchor" href="#routing"><span></span></a>Routing</h1>
 <h3 id="server-side"><a class="heading-anchor" href="#server-side"><span></span></a>Server Side</h3>
-<p>If you want to add a new route to DemocracyOS, first thing to do is to create a new module under <code>lib</code> for it and expose an <code>app</code> (an <code>express</code> instance) that requires <code>lib/layout</code>. For example:</p>
-<p>In <code>lib/mypage/index.js</code></p>
+<p>If you want to add a new route to DemocracyOS, first thing to do is to create a new module under the corresponding bundle folder (for example: <code>lib/site</code>) for it and expose an <code>app</code> (an <code>express</code> instance) that requires <code>lib/site/layout</code>. For example:</p>
+<p>In <code>lib/site/mypage/index.js</code></p>
 <pre><code>/**
  * Module dependencies.
  */
@@ -98,12 +101,45 @@ If you&#x2019;re either a <code>Windows</code> or <code>OS/X</code> user, using 
 var express = require(&apos;express&apos;);
 var app = module.exports = express();
 
-app.get(&apos;/mypage&apos;, require(&apos;lib/layout&apos;));
-</code></pre><p>And at the bottom of <code>lib/boot/index.js</code></p>
-<pre><code>app.use(require(&apos;lib/mypage&apos;));
+app.get(&apos;/mypage&apos;, require(&apos;lib/site/layout&apos;));
+</code></pre><p>And at the bottom of <code>lib/site/boot/index.js</code></p>
+<pre><code>app.use(require(&apos;lib/site/mypage&apos;));
 </code></pre><h3 id="client-side"><a class="heading-anchor" href="#client-side"><span></span></a>Client Side</h3>
+<p>This applies to <code>/lib/site</code> only because we are currently migrating the other bundles to React, if you are working on <code>lib/admin</code> or <code>lib/settings</code> check for the <a href="#DEPRECATED">DEPRECATED</a> section below.</p>
+<p>For client side routing, we use <a href="https://reacttraining.com/react-router/">react-router 2.6.1</a>, a client-side router that integrates with react&#x2019;s composability.</p>
+<p>You should create a new route on <code>lib/site/boot/router.js</code> and include the following lines:</p>
+<pre><code>&lt;Route path=&apos;my-route&apos; component={MyComponent} /&gt;
+</code></pre><p>If you are creating a page for displaying content (and not topics) you should create a react component like so:</p>
+<pre><code>import React, { Component } from &apos;react&apos;
+
+export default class YourPage extends Component {
+  render () {
+    return &lt;div&gt;Your page here&lt;/div&gt;
+  }
+}
+</code></pre><h1 id="stores"><a class="heading-anchor" href="#stores"><span></span></a>Stores</h1>
+<p>Stores are the responsible for communicating with the server side API to get the needed data. A store must have a <code>name</code> function defined returning the name of the model that&#x2019;s related to, because it is used to build up the API URL.</p>
+<p>For making requests to the server we recoment <a href="https://github.com/github/fetch">fetch</a>.</p>
+<p>If you create a new store you should extend <code>lib/stores/store/store.js</code>.</p>
+<pre><code>import Store from lib/stores/store/store&apos;;
+
+class MyModelStore extends Store {
+  name() {
+    return &apos;myModel&apos;; // calls will be made to &apos;/api/myModel&apos;
+  }
+}
+</code></pre><p>That store comes already bundled with methods like:</p>
+<ul>
+<li>findOne</li>
+<li>findAll</li>
+<li>destroy</li>
+</ul>
+<p>Store uses <a href="http://babeljs.io/docs/learn-es2015/">Promises</a> to make async calls, caching the promises on a private variable called <code>_fetches</code>.</p>
+<p>To see a full example of a customized store, you can see <code>lib/stores/topic-store/topic-store.js</code>.</p>
+<h1 id="deprecated"><a class="heading-anchor" href="#deprecated"><span></span></a>DEPRECATED</h1>
+<h3 id="client-side-routing"><a class="heading-anchor" href="#client-side-routing"><span></span></a>Client Side routing</h3>
 <p>For client side routing, we use <a href="https://github.com/visionmedia/page.js">page.js</a>, a micro client-side router inspired by the Express router.</p>
-<p>You should create a new file on <code>lib/mypage/mypage.js</code> and include the following lines:</p>
+<p>You should create a new file on the corresponding bundle folder (eg.: <code>lib/admin/mypage/mypage.js</code>) and include the following lines:</p>
 <pre><code>import page from &apos;page&apos;;
 
 page(&apos;/mypage&apos;, (ctx, next) =&gt; {
@@ -121,8 +157,8 @@ page(&apos;/mypage&apos;, (ctx, next) =&gt; {
   myPage.appendTo(el[0]);
 });
 </code></pre><p>Which leads us to&#x2026; views.</p>
-<h1 id="views"><a class="heading-anchor" href="#views"><span></span></a>Views</h1>
-<p>To create new views (the HTML that you will show to the end user) start by creating a new file inside <code>lib/mypage</code> called <code>view.js</code>. This is if you also have a route called that way, but if you don&#x2019;t you can just create it under <code>lib/my-view/view.js</code>.</p>
+<h3 id="views"><a class="heading-anchor" href="#views"><span></span></a>Views</h3>
+<p>To create new views (the HTML that you will show to the end user) start by creating a new file inside <code>lib/admin/mypage</code> called <code>view.js</code>.</p>
 <p>We have our own <code>View</code> library under <code>lib/view/view.js</code> which provides you with methods for:</p>
 <ul>
 <li><code>constructor</code>: pass a template and locals for that template</li>
@@ -142,7 +178,7 @@ export default class MyView extends View {
     super(template, { topic });
   }
 }
-</code></pre><h1 id="templates"><a class="heading-anchor" href="#templates"><span></span></a>Templates</h1>
+</code></pre><h3 id="templates"><a class="heading-anchor" href="#templates"><span></span></a>Templates</h3>
 <p>On the previous example, we used a template. This file is written in <a href="http://jade-lang.com/">jade</a> format and it should have one and only one container element. If you write something like:</p>
 <pre><code>.topic-container
   .topic-body
@@ -151,28 +187,9 @@ export default class MyView extends View {
   .comment-form
     // ...
 </code></pre><p>You have two root containers (<code>topic-container</code> and <code>.comments</code>) and you will run into problems with that. Templates can be passed in data on the <code>locals</code> objects: on the view when you call <code>super(template, locals)</code>.</p>
-<h1 id="stores"><a class="heading-anchor" href="#stores"><span></span></a>Stores</h1>
-<p>Stores are the responsible for communicating with the server side API to get the needed data. A store must have a <code>name</code> function defined returning the name of the model that&#x2019;s related to, because it is used to build up the API URL.</p>
-<p>For making requests to the server we use our own mode on <code>lib/request/request.js</code> which uses <a href="https://github.com/visionmedia/superagent">superagent</a>.</p>
-<p>As with the Views, if you create a new store you should extend <code>lib/store/store.js</code>.</p>
-<pre><code>import Store from &apos;../store/store&apos;;
-
-class MyModelStore extends Store {
-  name() {
-    return &apos;myModel&apos;; // calls will be made to &apos;/api/myModel&apos;
-  }
-}
-</code></pre><p>That store comes already bundled with methods like:</p>
-<ul>
-<li>findOne</li>
-<li>findAll</li>
-<li>destroy</li>
-</ul>
-<p>Store uses <a href="http://babeljs.io/docs/learn-es2015/">Promises</a> to make async calls, caching the promises on a private variable called <code>_fetches</code>.</p>
-<p>To see a full example of a customized store, you can see <code>lib/topic-store/topic-store.js</code>.</p>
-<h1 id="middlewares"><a class="heading-anchor" href="#middlewares"><span></span></a>Middlewares</h1>
+<h3 id="middlewares"><a class="heading-anchor" href="#middlewares"><span></span></a>Middlewares</h3>
 <p>You will probably need the data on your pages, for that you can create a custom <a href="https://github.com/visionmedia/page.js#routing">middleware</a> function.</p>
-<p>To keep things organized we have created some modules like <code>lib/topic-middlewares/topic-middlewares.js</code>.</p>
+<p>To keep things organized we have created some modules like <code>lib/middlewares/topic-middlewares/topic-middlewares.js</code>.</p>
 <p>Under the routes that need data, you should include these middlewares and probably you will be using a store for making those calls.</p>
 <p>When the data is ready, then you should call <code>next</code> on that middleware, for example:</p>
 <pre><code>export function findMyModel(ctx, next) {
